@@ -1,0 +1,187 @@
+body {
+background:#000;
+font-family:"Roboto Condensed", sans-serif;
+font-size: 12px;
+color: #555;
+margin: 0;
+padding: 0;
+-webkit-font-smoothing:antialiased;
+text-rendering:auto;
+}
+
+#partecima{
+position:absolute;
+margin: 0px;
+width: 100%;
+height: 100%;
+}
+
+
+#divdomenu {
+width: 100%;
+z-index: 999;
+position: absolute;
+}
+
+#head {
+max-width: 930px;
+height: 50px;
+margin: 0px auto;
+padding: 10px;
+
+}
+
+.logo {
+    float:left;
+	width: 50px;
+height: 50px;
+margin: 0;
+padding: 0;
+opacity: 0.95;
+}
+
+#menu {
+	font-family:"Roboto Condensed", sans-serif;
+	float:right;
+	margin:0;
+	padding:0;
+}
+
+ul li{
+	list-style-type: none;
+	display:inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding: 10px;
+	font-size: 16px;
+	font-family:"Roboto Condensed", sans-serif;
+	color:#FFF;
+	cursor:pointer;
+}
+
+#menu li:hover{
+	background:#333;
+	width: 400px;
+    color:#FFF;
+}
+
+#menu li {
+	transition:all .9s ease;
+}
+
+ul li a {
+font-family:"Roboto Condensed", sans-serif;
+color:#CCC;
+text-decoration:none;
+cursor:pointer;
+}
+
+ul li a:hover {
+font-family:"Roboto Condensed", sans-serif;
+color:#FFF;
+text-decoration:none;
+}
+
+#fundo {
+	width: 100%;
+	height: 100%;
+	min-height: 480px;
+	background-size: cover;
+	background-image: url(imagens/fundo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#divcentral {
+	position:relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	overflow:hidden;
+	
+}
+
+
+#divcentral h1 {
+	font-family:"Roboto Condensed", sans-serif;
+	font-size:90px;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+	color:#FFF;
+	line-height: 90px;
+	margin:0;
+	padding:0;
+	border: 0;
+    outline: 0;
+	vertical-align: baseline;
+background: transparent;
+}
+
+#divcentral p {
+	font-family: 'Roboto Condensed', sans-serif;
+font-size: 30px;
+text-align: center;
+color: #fff;
+line-height: 30px
+}
+
+.clear {
+clear: both;
+}
+
+#partebaixo {
+	width: 100%;
+height: 100%;
+min-height: 430px;
+background: #fff;
+padding-top: 50px;
+}
+
+#sobre img {
+	border-radius: 100px;
+display: block;
+margin: 0 auto;
+padding-top: 50;
+margin-bottom: 50px;
+clear: both;
+
+}
+
+#sobre p {
+	font-family:"Roboto Condensed", sans-serif;
+	font-size:16px;
+	text-align:center;
+	color:#555;
+	line-height: 34px;
+	font-weight: 300;
+	
+}
+
+#sobre strong {
+	font-weight:bold;
+	font-size:16px;
+}
+
+#redes {
+width: 100%;
+height: 25%;
+background: #000;
+padding-top: 50px;
+}
+
+#botoes .left {
+margin-top: 20px;
+margin-left: 200px;
+}
+
+.right {
+	float:right;
+	color:#FFF;
+	font-size:16px;
+	top: 10%;
+	margin-right: 200px;
+}
+#data_hora {
+	right:50;
+	top: 40%;
+}

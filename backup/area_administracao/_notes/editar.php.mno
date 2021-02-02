@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:id;datatype:int,name:título;datatype:string,name:imagem;datatype:int,name:categoria;datatype:int,name:data;datatype:date,name:descricao;datatype:blob,name:complemento1;datatype:blob,name:complemento2;datatype:blob" />
+	<infoitem key="UD_rcontent" value="name:id;datatype:int,name:titulo;datatype:string,name:imagem;datatype:string,name:categoria;datatype:string,name:data;datatype:date,name:descricao;datatype:blob,name:complemento1;datatype:blob,name:complemento2;datatype:blob" />
+	<infoitem key="UD_editar_port" value="name:id;datatype:int,name:titulo;datatype:string,name:imagem;datatype:string,name:categoria;datatype:string,name:data;datatype:date,name:descricao;datatype:blob,name:complemento1;datatype:blob,name:complemento2;datatype:blob" />
+	<infoitem key="UD_editar" value="name:id;datatype:int,name:titulo;datatype:string,name:imagem;datatype:string,name:categoria;datatype:string,name:data;datatype:date,name:descricao;datatype:blob,name:complemento1;datatype:blob,name:complemento2;datatype:blob" />
+</info>

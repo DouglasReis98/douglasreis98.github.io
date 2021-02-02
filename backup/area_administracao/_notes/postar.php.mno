@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_port_post" value="name:id;datatype:int,name:titulo;datatype:string,name:imagem;datatype:string,name:categoria;datatype:string,name:data;datatype:date,name:descricao;datatype:blob,name:complemento1;datatype:blob,name:complemento2;datatype:blob" />
+	<infoitem key="UD_categoria_port" value="name:categoria;datatype:string" />
+</info>
