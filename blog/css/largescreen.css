@@ -1,0 +1,24 @@
+/*SOBRE*/
+.sobre{
+	height: 100%;
+}
+
+.sobre h2{
+	font-size: 1.5em;
+}
+
+
+/*---SERVIÇOS---*/
+.servicos{
+	height: auto;
+}
+
+/*----------CONTATO----------*/
+
+.contato{
+	height: 100%;
+}
+
+.contato table td #mensagem{
+	height: 22em;
+}

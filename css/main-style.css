@@ -33,14 +33,13 @@ box-sizing: border-box; border:none; outline: none;
 .logo a img{
 	width:80px;
 	height:40px;
-	margin-top: 10px;
+	margin-top: 5px;
 	opacity:70%;
 	float: left;
 }
 
 .logo a img:hover{
 	opacity: 100%;
-
 }
 
 /*MENU*/
@@ -49,7 +48,8 @@ box-sizing: border-box; border:none; outline: none;
 	float: right;
 }
 .menu li{
-	float: left;
+	display: inline;
+	line-height: 50px;
 	margin-top: 21px;
 	margin-bottom: 21px;
 	padding:0px 10px;
