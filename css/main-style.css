@@ -22,10 +22,12 @@ box-sizing: border-box; border:none; outline: none;
 /*-----------------------------------------INDEX-----------------------------------------*/
 /*CABEÇALHO*/
 .cabecalho {
-	min-width:100%; 
+	min-width:100%;
+	height: 60px;
 	float:left;
 	top: 0;
-	padding: 0px 10%;
+
+	padding: 5px 10%;
 	position: fixed;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 80%);
@@ -207,7 +209,6 @@ box-sizing: border-box; border:none; outline: none;
 .recentes{
 	width: 100%;
 	height: 100vh;
-	padding: 60px;
 	background-color: #666666;
 }
 
@@ -218,7 +219,21 @@ box-sizing: border-box; border:none; outline: none;
 	text-transform: uppercase;
 	color: black;
 	font-size: 2em;
-	padding-bottom: 5px;
+	padding: 50px;
+}
+
+.box-recentes{
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 40px;
+}
+
+.img-recentes img{
+	width: 400px;
+	height: 260px;
 }
 
 
@@ -462,6 +477,41 @@ box-sizing: border-box; border:none; outline: none;
 	color: black;
 	font-size: 1.5em;
 	padding: 10px;
+}
+
+/*-----------------------------------------PORTFÓLIO---------------------------------------*/
+.portfolio {
+	width: 100%;
+	height: 100vh;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.portfolio h2{
+	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
+box-sizing: border-box; border:none; outline: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: black;
+	font-size: 2em;
+	padding-bottom: 5px;
+}
+
+.portfolio img{
+	width: 380px; 
+	height: 240px;
+}
+
+.portfolio h3{
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 /*-----------------------------------------CONTATO-----------------------------------------*/

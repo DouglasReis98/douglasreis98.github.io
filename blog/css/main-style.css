@@ -25,19 +25,13 @@ box-sizing: border-box; border:none; outline: none;
 	min-width:100%; 
 	top: 0;
 	z-index: 1;
-	background-color: rgba(0, 0, 0, 80%);
+	background-image: linear-gradient(lightblue, blue);
 }
-#logo a img{
+#logo img{
 	width:50%;
 	height:35%;
 	margin-left: 25%;
-	opacity:70%;
 	line-height: 50px;
-}
-
-#logo a img:hover{
-	opacity: 100%;
-
 }
 
 /*MENU*/
@@ -45,7 +39,7 @@ box-sizing: border-box; border:none; outline: none;
 	min-width:100%;
 	height: 50px;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 80%);
+	background-color: blue;
 	position: fixed;
 }
 #menu li{
@@ -54,7 +48,7 @@ box-sizing: border-box; border:none; outline: none;
 	padding:0px 10px;
 }
 #menu li a{
-	color:lightgrey;
+	color: lightblue;
 	font-weight: bold;
 }
 #menu li a:hover{
@@ -74,33 +68,86 @@ box-sizing: border-box; border:none; outline: none;
 	}
 	#conteudo{
 		width: 50%;
-		height: 80vh;
+		height: auto;
 		margin: 40px 40px 80px 80px;/*topo, direita, inferior, esquerda*/
-		background: lightgrey;		
 		float: left;
+		justify-content: center;
+		border: 5px solid lightblue;
+		border-radius: 20px;
+	}
 
+	#conteudo img /*h2*/{
+		width: 640px; 
+		height: 380px;
+		display: block;
+		margin-top: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#conteudo h3{
+		font-size: 2em;
+		margin: 10px;
+	}
+
+	#conteudo p{
+		font-family: Trebuchet MS;
+		font-size: 1em;
+		margin: 10px;
+	}
+
+	#conteudo h5{
+		font-size: 1em;
+		margin: 10px;
 	}
 
 /*ÚLTIMOS ARTIGOS*/
 
 	.ultimos-artigos{
-		background-color: green;
+		border: 10px solid lightblue;
+		border-radius: 20px;
 		width: 30%;
 		height: 50vh;
 		float: right;
 		margin: 40px 90px 5px 50px;/*topo, direita, inferior, esquerda*/
 	}
+
+	.ultimos-artigos h3{
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.5em;
+		padding: 5px;
+		color: blue;
+	}
+
+	.ultimos-artigos p{
+		font-family: Verdana, sans-serif;
+		font-size: 1em;
+		padding: 5px 20px;
+	}
+
 /*PUBLICIDADE*/
 	.publicidade{
-		background-color: yellow;
+		border: 10px solid lightblue;
+		border-radius: 20px;
+
 		width: 30%;
 		height: 50vh;
 		float: right;
 		margin: 40px 90px 5px 50px;/*topo, direita, inferior, esquerda*/
 	}
+
+		.publicidade h3{
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.5em;
+		padding: 5px;
+		color: blue;
+	}
+
 /*RODAPÉ*/
 footer{
-	background-color: black;
+	background-color: blue;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -120,7 +167,7 @@ footer{
 .rodape-col a img{
 	max-width:180px;
 	max-height:170px;
-	opacity: 30%;
+	opacity: 50%;
 	margin-top: 50px;
 }
 
