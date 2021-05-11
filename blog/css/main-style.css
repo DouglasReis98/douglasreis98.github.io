@@ -1,4 +1,5 @@
 /*fontes do titulo e subtitulo*/
+/*
 @font-face{
 	font-family:titulo;
 	src:url(../fontes/Righteous-Regular.woff);
@@ -6,7 +7,7 @@
 @font-face{
 	font-family:subtitulo;
 	src:url(../fontes/Teko-Medium.woff);
-}
+}*/
 /*RESET*/
 *{
 	margin:0;
@@ -41,6 +42,7 @@ box-sizing: border-box; border:none; outline: none;
 	text-align: center;
 	background-color: blue;
 	position: fixed;
+	display: inline;
 }
 #menu li{
 	display: inline;	
