@@ -59,3 +59,19 @@
 		.publicidade h3{
 		font-size: 1em;
 	}
+
+	/*RODAPÉ*/
+
+.rodape-col{
+	width: 230px;
+	background-color: black;
+}
+
+.rodape-col a img{
+	max-width:200px;
+	max-height:190px;
+}
+
+.redes li i{
+	font-size: 25px;
+}
