@@ -52,7 +52,6 @@ box-sizing: border-box; border:none; outline: none;
 #menu li a{
 	color: lightblue;
 	font-weight: bold;
-	font-size: 70%;
 }
 #menu li a:hover{
 	color: white;
