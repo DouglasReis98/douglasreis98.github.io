@@ -72,7 +72,7 @@ box-sizing: border-box; border:none; outline: none;
 	#conteudo{
 		width: 60%;
 		height: auto;
-		margin: 40px 0 10px 75px;/*topo, direita, inferior, esquerda*/
+		margin: 40px 0 10px 60px;/*topo, direita, inferior, esquerda*/
 		float: left;
 		justify-content: center;
 		border: 5px solid lightblue;
