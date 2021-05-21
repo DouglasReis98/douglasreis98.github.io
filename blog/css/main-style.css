@@ -42,6 +42,8 @@ box-sizing: border-box; border:none; outline: none;
 	text-align: center;
 	background-color: blue;
 	display: inline;
+	position: sticky;
+	top: 0;
 }
 #menu li{
 	display: inline;	
@@ -60,10 +62,6 @@ box-sizing: border-box; border:none; outline: none;
 	.btn-menu, .btn-close{
 		display: none;
 	}
-.FixarNoTopo{
-	position:fixed;
-	top:0;
-}
 
 /*CONTEÚDO*/
 
