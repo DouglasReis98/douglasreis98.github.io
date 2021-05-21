@@ -50,7 +50,7 @@
 	});
 </script>
 <script>
-const nav = document.getElementById("menu")[0];
+const nav = document.getElementsById("menu")[0];
 const topoNav = nav.offsetTop;
 	
 window.onscroll = function(){
@@ -58,7 +58,7 @@ window.onscroll = function(){
 }
 	
 function fixarMenuNoTopo(){
-	if(window.pageYOffset >= topoNav)
+	if(window.pageYOffset >= topoNav){
 		nav.classList.add("FixarNoTopo");
 } else {
 	nav.classList.remove("FixarNoTopo");
