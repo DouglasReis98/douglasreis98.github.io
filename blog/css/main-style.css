@@ -41,7 +41,6 @@ box-sizing: border-box; border:none; outline: none;
 	height: 50px;
 	text-align: center;
 	background-color: blue;
-	position: fixed;
 	display: inline;
 }
 #menu li{
