@@ -61,6 +61,10 @@ box-sizing: border-box; border:none; outline: none;
 	.btn-menu, .btn-close{
 		display: none;
 	}
+.FixarNoTopo{
+	position:fixed;
+	top:0;
+}
 
 /*CONTEÚDO*/
 
