@@ -49,22 +49,6 @@
 		$("#menu").hide();
 	});
 </script>
-<script>
-const nav = document.getElementsById("menu")[0];
-const topoNav = nav.offsetTop;
-	
-window.onscroll = function(){
-	fixarMenuNoTopo();
-}
-	
-function fixarMenuNoTopo(){
-	if(window.pageYOffset >= topoNav){
-		nav.classList.add("FixarNoTopo");
-} else {
-	nav.classList.remove("FixarNoTopo");
-}
-	}
-</script>
 <main id="principal">
 
 <div id="conteudo">
