@@ -1,3 +1,23 @@
+/*CENTRO*/
+
+/*OI, MUITO PRAZER!!*/
+.apresentacao{
+	min-height: 50vh;
+}
+
+/*TRABALHOS RECENTES*/
+.recentes{
+	min-height: 50vh;
+
+}
+
+.box-recentes{
+	padding: 20px;
+	margin-top: 10px;
+
+}
+
+
 /*SOBRE*/
 .sobre{
 	height: 100%;
