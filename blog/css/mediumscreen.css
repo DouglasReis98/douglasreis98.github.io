@@ -23,6 +23,10 @@
 	font-size: 20px;
 }
 
+#menu li a:hover{
+	color: lightcyan;
+}
+
 .btn-menu{
 		display: block;
 		width: 100%;
@@ -46,7 +50,7 @@
 	}
 
 	.btn-close:hover{
-		color: blue;
+		color: lightcyan;
 		font-weight: bolder;
 	}
 
