@@ -221,7 +221,8 @@ box-sizing: border-box; border:none; outline: none;
 	text-align: center;
 	text-transform: uppercase;
 	color: black;
-	padding: 50px;
+	padding: 30px;
+
 }
 
 .box-recentes{
@@ -230,7 +231,8 @@ box-sizing: border-box; border:none; outline: none;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 10px 20px 40px 20px;
+	padding: 20px;
+	margin-top: 50px;
 
 }
 

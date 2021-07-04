@@ -56,6 +56,10 @@
 }
 
 /*TRABALHOS RECENTES*/
+.recentes{
+
+}
+
 .recentes h2{
 	font-size: 1.8em;
 	font-weight: bold;
@@ -64,8 +68,14 @@
 .box-recentes{
 	flex-wrap: wrap;
 	text-align: center;
-	padding: 0;
+	justify-content: space-between;
+	padding: 5px;
 	height: auto;
+
+}
+
+.img-recentes{
+	margin-bottom: 40px;
 }
 
 .img-recentes img{
