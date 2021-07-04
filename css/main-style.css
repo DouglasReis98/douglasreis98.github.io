@@ -128,6 +128,7 @@ box-sizing: border-box; border:none; outline: none;
 
 .texto{
 	font-size: 1.2em;
+	word-wrap: break-word;
 }
 
 .apresentacao .foto{
