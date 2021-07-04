@@ -55,6 +55,24 @@
 	margin-left: 35%;
 }
 
+/*TRABALHOS RECENTES*/
+.recentes h2{
+	font-size: 1.8em;
+	font-weight: bold;
+	padding: 10px;
+}
+.box-recentes{
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 0;
+	height: auto;
+}
+
+.img-recentes img{
+	width: 95%;
+	height: 95%;	
+}
+
 /*----------CONTATO----------*/
 
 .contato{
