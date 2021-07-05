@@ -74,3 +74,13 @@
 .redes li i{
 	font-size: 25px;
 }
+
+/*----------CONTATO----------*/
+
+.contato{
+	height: 100%;
+}
+
+.contato table td #mensagem{
+	height: 22em;
+}

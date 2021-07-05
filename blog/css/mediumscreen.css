@@ -102,4 +102,24 @@
 	/*PUBLICIDADE*/
 		.publicidade h3{
 		font-size: 1em;
-	}s
+	}
+
+/*----------CONTATO----------*/
+
+.contato{
+	height: 100%;
+}
+
+.contato table td #nome{
+	width: 18em;
+}
+
+.contato table td #email{
+	width: 18em;
+}
+
+.contato table td #mensagem{
+	resize: none;
+	width: 18em;
+	height: 22em;
+}

@@ -25,7 +25,7 @@ box-sizing: border-box; border:none; outline: none;
 #cabecalho {
 	min-width:100%; 
 	top: 0;
-	z-index: 1;
+
 	background-image: linear-gradient(lightblue, blue);
 }
 #logo img{
@@ -41,7 +41,8 @@ box-sizing: border-box; border:none; outline: none;
 	height: 50px;
 	text-align: center;
 	background-color: blue;
-	display: inline;
+	display: inline;	
+	z-index: 1;
 }
 #menu li{
 	display: inline;	
