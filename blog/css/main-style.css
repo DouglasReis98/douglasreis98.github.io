@@ -41,8 +41,8 @@ box-sizing: border-box; border:none; outline: none;
 	height: 50px;
 	text-align: center;
 	background-color: blue;
-	display: inline;	
 	z-index: 1;
+	display: block;
 }
 #menu li{
 	display: inline;	
