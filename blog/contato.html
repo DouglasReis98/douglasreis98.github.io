@@ -61,15 +61,33 @@
 		}
 	}
 </script>
-<main id="contato">
+<main class="contato">
 
 	<a name="contato"><h2>Contato</h2></a>
 	<form action="enviarcontato.php" method="post" name="form1" id="form1">
 		<table>
-	
-
+			<tr valign="baseline">
+				<td align="right" valign="top" nowrap="nowrap">Nome:</td>
+				<td valign="top"><input type="text" name="nome" id="nome" value=""/></td>
+			</tr>
+			<tr valign="baseline">
+				<td align="right" valign="top" nowrap="nowrap">Email:</td>
+				<td valign="top"><input type="text" name="email" id="email" value=""/></td>
+			</tr>
+			<tr valign="baseline">
+				<td align="right" valign="top" nowrap="nowrap">Mensagem:</td>
+				<td valign="top"><textarea name="mensagem" id="mensagem"/></textarea></td>
+			</tr>
+			<tr valign="baseline">
+				<td align="right" valign="top" nowrap="nowrap">&nbsp;</td>
+				<td valign="top">
+					<input class="btn" type="submit" value="Enviar"/>
+					<input class="btn" type="reset" value="Limpar"/>
+				</td>
+			</tr>
 		</table>
 	</form>
+
 </main>
 <footer>
 
