@@ -60,6 +60,7 @@ box-sizing: border-box; border:none; outline: none;
 .FixoNoTopo{
 	position: fixed;
 	top: 0;
+	z-index: 1;
 }
 
 /*.FixoNoTopo + .principal{
