@@ -37,13 +37,12 @@ box-sizing: border-box; border:none; outline: none;
 	width:80px;
 	height:40px;
 	margin-top: 5px;
-	opacity:70%;
+	opacity:80%;
 	float: left;
 }
 
 #logo img:hover{
 	opacity: 100%;
-	transition: opacity 0.5s;
 }
 
 /*MENU*/
@@ -269,7 +268,11 @@ footer{
 	max-width:180px;
 	max-height:170px;
 	opacity: 30%;
-	margin-top: 50px;
+	margin-top: 50px;	
+}
+
+.rodape-col a img:hover{
+	opacity: 60%;
 }
 
 .rodape-col h3{
