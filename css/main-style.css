@@ -21,18 +21,16 @@ box-sizing: border-box; border:none; outline: none;
 
 /*-----------------------------------------INDEX-----------------------------------------*/
 /*CABEÇALHO*/
-.cabecalho {
-	min-width:100%;
-	height: 60px;
-	float:left;
-	top: 0;
-
-	padding: 5px 10%;
-	position: fixed;
-	z-index: 1;
-	background-color: rgba(0, 0, 0, 80%);
+#cabecalho{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  justify-content: space-between;
+  background: #e7e7e7;
 }
-.logo a img{
+#logo a img{
 	width:80px;
 	height:40px;
 	margin-top: 5px;
@@ -40,36 +38,29 @@ box-sizing: border-box; border:none; outline: none;
 	float: left;
 }
 
-.logo a img:hover{
+#logo a img:hover{
 	opacity: 100%;
 }
 
 /*MENU*/
-.menu {
-	min-width: 50%; 
-	float: right;
-}
-.menu li{
-	display: inline;
-	line-height: 50px;
-	margin-top: 21px;
-	margin-bottom: 21px;
-	padding:0px 10px;
-}
-.menu li a{
-	color:lightgrey;
-	font-weight: bold;
-	font-size: 90%;
-
-}
-.menu li a:hover{
-	color: white;
-	transition: color 0.5s;
+#menu-botoes{
+  display: flex;
+  gap: .5rem;
 }
 
-	.btn-menu, .btn-close{
-		display: none;
-	}
+#menu a{
+  display: block;
+  padding: .5rem;
+}
+
+a:hover{
+  text-decoration: underline;
+  background: lightgrey;
+}
+
+#btn-mobile{
+  display: none;
+}
 /*CENTRO*/
 
 .principal {
