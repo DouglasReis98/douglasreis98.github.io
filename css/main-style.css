@@ -30,7 +30,7 @@ box-sizing: border-box; border:none; outline: none;
   justify-content: space-between;
   background: #e7e7e7;
 }
-#logo a img{
+#logo img{
 	width:80px;
 	height:40px;
 	margin-top: 5px;
@@ -38,7 +38,7 @@ box-sizing: border-box; border:none; outline: none;
 	float: left;
 }
 
-#logo a img:hover{
+#logo img:hover{
 	opacity: 100%;
 }
 
