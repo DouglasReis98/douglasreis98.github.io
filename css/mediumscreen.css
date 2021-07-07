@@ -18,6 +18,7 @@
   #hamburger{
     border-top: 2px solid;
     width: 20px;
+    color: white;
   }
   
   #hamburger::after, #hamburger::before{
@@ -52,7 +53,7 @@
     transition: .6s;
     top: 70px;
     right: 0;
-    background: #e7e7e7;
+    background-color: rgba(0, 0, 0, 80%);
     z-index: 1000;
     visibility: hidden;
     overflow: hidden;
@@ -73,7 +74,7 @@
 
 /*CENTRO*/
 .titulo-subtitulo h1{
-	font-size: 4em;
+	font-size: 3em;
 }
 .titulo-subtitulo h2 {
 	font-size: 1.5em;

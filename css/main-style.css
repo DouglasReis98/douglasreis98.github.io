@@ -26,11 +26,12 @@ box-sizing: border-box; border:none; outline: none;
   display: flex;
   align-items: center;
   height: 70px;
-  padding: 1rem;
+  padding: 0 2rem 0 2rem;
   justify-content: space-between;
-  background: #e7e7e7;
-z-index: 1;
-	position: relative;
+  background-color: rgba(0, 0, 0, 80%);
+	z-index: 1;
+	position: fixed;
+	width: 100%;
 }
 #logo img{
 	width:80px;
@@ -42,6 +43,7 @@ z-index: 1;
 
 #logo img:hover{
 	opacity: 100%;
+	transition: opacity 0.5s;
 }
 
 /*MENU*/
@@ -53,11 +55,12 @@ z-index: 1;
 #menu a{
   display: block;
   padding: .5rem;
+  color: lightgrey;
 }
 
-a:hover{
-  text-decoration: underline;
-  background: lightgrey;
+#menu a:hover{
+  color: white;
+  transition: color 0.5s;
 }
 
 #btn-mobile{
@@ -92,7 +95,7 @@ a:hover{
 }
 
 .titulo-subtitulo h1{
-	color:white;
+	color: white;
 	font-family: titulo;
 	font-size: 6em;
 }
