@@ -21,57 +21,51 @@ box-sizing: border-box; border:none; outline: none;
 	a{text-decoration: none;}
 
 /*-----------------------------------------INDEX-----------------------------------------*/
-/*CABEÇALHO*/
-#cabecalho {
-	min-width:100%; 
-	top: 0;
-
-	background-image: linear-gradient(lightblue, blue);
+#cabecalho{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0 2rem 0 2rem;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 80%);
+	z-index: 1;
+	position: fixed;
+	width: 100%;
 }
 #logo img{
-	width:50%;
-	height:35%;
-	margin-left: 25%;
-	line-height: 50px;
+	width:80px;
+	height:40px;
+	margin-top: 5px;
+	opacity:70%;
+	float: left;
+}
+
+#logo img:hover{
+	opacity: 100%;
+	transition: opacity 0.5s;
 }
 
 /*MENU*/
-#menu {		
-	min-width:100%;
-	height: 50px;
-	text-align: center;
-	background-color: blue;
-	z-index: 1;
-	display: block;
-}
-#menu li{
-	display: inline;	
-	line-height: 50px;
-	padding:0px 10px;
-}
-#menu li a{
-	color: lightblue;
-	font-weight: bold;
-}
-#menu li a:hover{
-	color: white;
-	transition: color 0.5s;
+#menu-botoes{
+  display: flex;
+  gap: .5rem;
 }
 
-.FixoNoTopo{
-	position: fixed;
-	top: 0;
-	z-index: 1;
+#menu a{
+  display: block;
+  padding: .5rem;
+  color: lightgrey;
 }
 
-/*.FixoNoTopo + .principal{
-	padding-top: 60px;
-}*/
+#menu a:hover{
+  color: white;
+  transition: color 0.5s;
+}
 
-	.btn-menu, .btn-close{
-		display: none;
-	}
-
+#btn-mobile{
+  display: none;
+}
 /*CONTEÚDO*/
 
 	#principal{

@@ -22,44 +22,39 @@
 	</head>
 <body>
 <header id="cabecalho">
-<div id="logo">
-<img src="img/logoblog.png">
-</div>
-<button class="btn-menu"><i class="fas fa-bars fa-lg"></i></button>
-<nav id="menu">
-<a class="btn-close">X</a>
-<ul>
+  <a id="logo" href="index.html" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false"title="Douglas Reis"><img src="img/logoblog.png"></a>
+  <nav id="menu">
+    <button id="btn-mobile"><span id="hamburger"></span></button>
+    <ul id="menu-botoes" role="botões do menu">
 <li><a href="index.html">HOME</a></li>
 <li><a href="artigos.html">ARTIGOS</a></li>
 <li><a href="portfolio.html">PORTFÓLIO</a></li>
 <li><a href="contato.html">CONTATO</a></li>
 </ul>
-</nav>
+  </nav>
 </header>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-	$(".btn-menu").click(function(){
-		$("#menu").show();
-	});
-	$(".btn-close").click(function(){
-		$("#menu").hide();
-	});
-</script>
-<script>
-	const nav = document.getElementById("menu")[0];
-	const topoNav = menu.offsetTop;
+	/*Atribui o id btn-moblie à constante btnMobile*/
+const btnMobile = document.getElementById('btn-mobile');
 
-	window.onscroll = function(){
-		fixarMenuNoTopo();
-	}
+/*A função ativa e desativa a classe active */
+function toggleMenu(){
+  if (event.type === 'touchstart') event.preventDefault()
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+  const active = menu.classList.contains('active')
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if(active){
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
+}
 
-	function fixarMenuNoTopo(){
-		if (window.pageYOffset >= topoNav) {
-			menu.classList.add("FixoNoTopo");
-		} else{
-			menu.classList.remove("FixoNoTopo");
-		}
-	}
+/*Atribui o evento 'click' para ser usado na função toggleMenu*/
+btnMobile.addEventListener('click', toggleMenu);
+
+btnMobile.addEventListener('touchstart', toggleMenu);
 </script>
 <main id="principal">
 
