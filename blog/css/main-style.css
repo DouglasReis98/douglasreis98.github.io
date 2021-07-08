@@ -48,13 +48,13 @@ padding: 0;
   display: flex;
   gap: .5rem;
 justify-content: center;
+padding:0px 10px;
 }
 
 #menu a{
   display: block;
   padding: .5rem;
   color: lightgrey;
-  padding:0px 10px;
 }
 
 #menu a:hover{
