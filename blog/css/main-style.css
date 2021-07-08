@@ -41,7 +41,7 @@ padding: 0;
     text-align: center;
     background-color: blue;
     z-index: 1;
-    display: block;
+    display: inline;
 	min-width: 100%;
 }
 
