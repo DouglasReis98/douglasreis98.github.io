@@ -205,6 +205,12 @@ footer{
 	max-height:340px;
 	margin-top: 50px;
 	filter: invert(100%);
+	    opacity: 50%;
+}
+
+.rodape-col a img:hover{
+	    opacity: 100%;
+	transition: opacity 0.5s;
 }
 
 .rodape-col h3{
