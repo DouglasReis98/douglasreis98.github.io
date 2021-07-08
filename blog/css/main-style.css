@@ -22,28 +22,17 @@ box-sizing: border-box; border:none; outline: none;
 
 /*-----------------------------------------INDEX-----------------------------------------*/
 #cabecalho{
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  height: 70px;
-  padding: 0 2rem 0 2rem;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 80%);
-	z-index: 1;
-	position: fixed;
-	width: 100%;
+#cabecalho {
+    min-width: 100%;
+    top: 0;
+    background-image: linear-gradient(lightblue, blue);
 }
-#logo img{
-	width:80px;
-	height:40px;
-	margin-top: 5px;
-	opacity:70%;
-	float: left;
 }
-
-#logo img:hover{
-	opacity: 100%;
-	transition: opacity 0.5s;
+#logo img {
+    width: 50%;
+    height: 35%;
+    margin-left: 25%;
+    line-height: 50px;
 }
 
 /*MENU*/
