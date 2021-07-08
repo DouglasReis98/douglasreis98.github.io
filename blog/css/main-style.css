@@ -236,12 +236,13 @@ footer{
 
 .redes li i{
 	color: white;
+	opacity 50%;
 	font-size: 30px;
 }
 
 .redes li i:hover{
-	color: grey;
-	transition: color 0.2s;
+	opacity 100%;
+	transition: opacity 0.2s;
 }
 
 .redes a{
