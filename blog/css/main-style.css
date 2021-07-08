@@ -42,6 +42,7 @@ padding: 0;
     background-color: blue;
     z-index: 1;
     display: block;
+	min-width: 100%;
 }
 
 #menu-botoes{
