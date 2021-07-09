@@ -84,8 +84,6 @@ display: flex;
 	}
 
 	#conteudo img /*h2*/{
-		width: 760px; 
-		height: 440px;
 		display: block;
 		margin-top: 15px;
 		margin-right: auto;
@@ -114,7 +112,7 @@ display: flex;
 	display: inline-block;
 	width: 25%;
 	height: auto;
-	margin: 40px 50px 5px 50px;/*topo, direita, inferior, esquerda*/
+	margin: 40px 10px 5px 50px;/*topo, direita, inferior, esquerda*/
 	}
 
 /*ÚLTIMOS ARTIGOS*/
@@ -130,7 +128,7 @@ display: flex;
 	.ultimos-artigos h3{
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 1.2em;
 		padding: 5px;
 		color: blue;
 	}
@@ -153,7 +151,7 @@ display: flex;
 		.publicidade h3{
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 1.2em;
 		padding: 5px;
 		color: blue;
 	}
