@@ -1,7 +1,11 @@
 /*---LOGO---*/	
 .logo a img {
     margin-top: 10px;
+}
 
+/*-----------------------------------------INDEX-----------------------------------------*/
+#cabecalho {
+	padding: 0 2rem 0 2rem;
 }
 
 #btn-mobile{
