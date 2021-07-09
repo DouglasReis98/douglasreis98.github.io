@@ -107,7 +107,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 /*OI, MUITO PRAZER!!*/
 .apresentacao{
-	width: auto;
+	width: 100%;
 	min-height: 100vh;
 	padding: 60px;
 	background-color: #333333;
@@ -211,7 +211,7 @@ box-sizing: border-box; border:none; outline: none;
 
 /*TRABALHOS RECENTES*/
 .recentes{
-	width: auto;
+	width: 100%;
 	min-height: 100vh;
 	background-color: #666666;
 }
