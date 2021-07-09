@@ -26,7 +26,7 @@ box-sizing: border-box; border:none; outline: none;
 display: flex;
 	align-items: center;
 	height: 70px;
-	padding: 0 2rem 0 2rem;
+	padding: 0 4rem 0 4rem;
 	justify-content: space-between;
     	background-color: #3636ff;
 	z-index: 1;
