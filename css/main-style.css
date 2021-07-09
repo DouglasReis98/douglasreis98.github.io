@@ -358,6 +358,7 @@ footer{
 	background-repeat: no-repeat;
 	background-size: 900px;
 	background-blend-mode: color-burn; /*multiply*/
+	margin-top: 70px;
 }
 
 .sobre .texto{
@@ -446,6 +447,7 @@ footer{
 	padding: 80px 20px 60px 20px;
 	position: relative;;
 	background-color: #666666;
+	margin-top: 70px;
 }
 
 .servicos h2{
@@ -499,6 +501,7 @@ box-sizing: border-box; border:none; outline: none;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 70px;
 }
 
 .portfolio h2{
@@ -530,6 +533,7 @@ box-sizing: border-box; border:none; outline: none;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 70px;
 }
 
 .contato h2{
