@@ -28,7 +28,7 @@ box-sizing: border-box; border:none; outline: none;
   height: 70px;
   padding: 0 2rem 0 2rem;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 80%);
+  background-color: black;
 	z-index: 1;
 	position: fixed;
 	width: 100%;
