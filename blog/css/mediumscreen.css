@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.FixoNoTopo{
+.FixoNoTopo #cabecalho{
 	position: fixed;
 	top: 0;
 	z-index: 1;
