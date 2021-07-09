@@ -22,9 +22,15 @@ box-sizing: border-box; border:none; outline: none;
 
 /*-----------------------------------------INDEX-----------------------------------------*/
 #cabecalho {
-    min-width: 100%;
-    top: 0;
+   box-sizing: border-box;
+display: flex;
+	align-items: center;
+	height: 70px;
+	padding: 0 2rem 0 2rem;
+	justify-content: space-between;
     background-image: linear-gradient(lightblue, blue);
+	z-index: 1;
+	position: fixed;
 }
 	
 #logo img {
