@@ -350,7 +350,7 @@ footer{
 .sobre{
 	width: 100%;
 	height: 100vh;
-	padding: 80px 20px 60px 20px;
+	padding: 20px;
 	position: relative;
 	background-color: #333333;
 	background-image: url(../img/logo2-1.png);
@@ -444,7 +444,7 @@ footer{
 .servicos{
 	width: 100%;
 	height: 100vh;
-	padding: 80px 20px 60px 20px;
+	padding: 20px;
 	position: relative;;
 	background-color: #666666;
 	margin-top: 70px;
@@ -497,7 +497,7 @@ box-sizing: border-box; border:none; outline: none;
 .portfolio {
 	width: 100%;
 	height: 100vh;
-	padding: 80px 20px 60px 20px;
+	padding: 20px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -529,7 +529,7 @@ box-sizing: border-box; border:none; outline: none;
 .contato {
 	width: 100%;
 	height: 100vh;
-	padding: 80px 20px 60px 20px;
+	padding: 20px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
