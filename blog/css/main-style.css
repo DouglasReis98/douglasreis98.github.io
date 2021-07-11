@@ -282,6 +282,15 @@ footer{
 		padding: 0;
 	}
 
+	#principal h6{
+		color: red;
+		display: inline;
+		float: left;
+		box-sizing: border-box;
+		background-color: blue;
+
+	}
+
 	#texto-artigo{
 	box-sizing: border-box;
 	background-color: lightblue;
@@ -290,7 +299,8 @@ footer{
 	float: left;
 	text-align: justify;
 	margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
-
+	font-family:'Trebuchet MS', sans-serif;
+	font-size: 1em;
 }
 /*-----------------------------------------CONTATO-----------------------------------------*/
 .contato {
