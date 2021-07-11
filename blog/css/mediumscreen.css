@@ -126,3 +126,7 @@
 	width: 18em;
 	height: 22em;
 }
+
+footer{
+  background-image: linear-gradient(#2222cc, #5f97ff, #2222cc);
+}
