@@ -279,16 +279,14 @@ footer{
 		display: block;
 		float: left;
 		margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
-		padding: 0;
 	}
 
 	#principal h6{
-		color: red;
 		display: inline;
 		float: left;
 		box-sizing: border-box;
-		background-color: blue;
-
+		width: 60%;
+		margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
 	}
 
 	#texto-artigo{

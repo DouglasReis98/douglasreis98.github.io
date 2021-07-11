@@ -107,6 +107,28 @@
 	margin: 20px 10px 5px 10px;/*topo, direita, inferior, esquerda*/
 	}
 
+/********************ARTIGOS************************/
+  #titulo{
+  font-size: 1em;
+}
+
+#principal h6{
+    width: 90%;
+    margin: 20px 0 10px 20px;/*topo, direita, inferior, esquerda*/
+  }
+
+  #texto-artigo{
+  box-sizing: border-box;
+  background-color: lightblue;
+  width: 90%;
+  height: auto;
+  float: left;
+  text-align: justify;
+  margin: 20px 0 10px 20px;/*topo, direita, inferior, esquerda*/
+  font-family:'Trebuchet MS', sans-serif;
+  font-size: 1em;
+}
+
 /*----------CONTATO----------*/
 
 .contato{
