@@ -107,24 +107,6 @@
 	margin: 20px 10px 5px 10px;/*topo, direita, inferior, esquerda*/
 	}
 
-	/*ÚLTIMOS ARTIGOS*/
-
-	.ultimos-artigos h3{
-		font-size: 1em;
-
-	}
-
-	.ultimos-artigos p{
-		font-family: Verdana, sans-serif;
-		font-size: 0.7em;
-		padding: 5px 20px;
-	}
-
-	/*PUBLICIDADE*/
-		.publicidade h3{
-		font-size: 1em;
-	}
-
 /*----------CONTATO----------*/
 
 .contato{
