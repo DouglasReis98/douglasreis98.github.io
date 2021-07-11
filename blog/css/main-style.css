@@ -274,6 +274,24 @@ footer{
 	padding: 20px 40px 20px 50px;
 }
 
+	#img-artigo{
+		width: 60%;
+		display: block;
+		float: left;
+		margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
+		padding: 0;
+	}
+
+	#texto-artigo{
+	box-sizing: border-box;
+	background-color: lightblue;
+	width: 60%;
+	height: auto;
+	float: left;
+	text-align: justify;
+	margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
+
+}
 /*-----------------------------------------CONTATO-----------------------------------------*/
 .contato {
 	width: 100%;
