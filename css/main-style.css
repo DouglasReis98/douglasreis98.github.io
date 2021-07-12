@@ -454,6 +454,12 @@ footer{
 	position: relative;;
 	background-color: #666666;
 	margin-top: 70px;
+	background-color: #9a9b9c;
+	    background-image: url(../img/logo-fundo.png);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: 90%;
+	    background-blend-mode: color-dodge;
 }
 
 .servicos h2{
@@ -465,13 +471,6 @@ footer{
     font-family: Trebuchet MS, sans-serif;
     font-weight: bold;
 	animation: neon 2s alternate infinite ease-in-out;
-	background-color: #9a9b9c;
-	    background-image: url(../img/logo-fundo.png);
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: 90%;
-	    background-blend-mode: color-dodge;
-
 }
 
 .caixa_serv{
