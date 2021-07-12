@@ -221,7 +221,7 @@ box-sizing: border-box; border:none; outline: none;
 	font-weight: bold;
 	box-sizing: border-box; 
 	border:none; outline: none;
-	text-align: right;
+	text-align: left;
 	text-transform: uppercase;
 	color: #00ccff;
 	--cor-neon: #00ccff;
