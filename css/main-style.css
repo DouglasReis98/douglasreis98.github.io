@@ -465,6 +465,12 @@ footer{
     font-family: Trebuchet MS, sans-serif;
     font-weight: bold;
 	animation: neon 2s alternate infinite ease-in-out;
+	background-color: #9a9b9c;
+	    background-image: url(../img/logo-fundo.png);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: 90%;
+	    background-blend-mode: color-dodge;
 
 }
 
@@ -510,6 +516,12 @@ box-sizing: border-box; border:none; outline: none;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
+		    background-color: #9a9b9c;
+	    background-image: url(../img/logo-fundo.png);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: 90%;
+	    background-blend-mode: color-dodge;
 }
 
 .portfolio h2{
@@ -544,6 +556,12 @@ box-sizing: border-box; border:none; outline: none;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
+	background-color: #9a9b9c;
+	    background-image: url(../img/logo-fundo.png);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: 90%;
+	    background-blend-mode: color-dodge;
 }
 
 .contato h2{
