@@ -212,7 +212,7 @@ box-sizing: border-box; border:none; outline: none;
 .recentes{
 	width: 100%;
 	min-height: 100vh;
-	    background-color: #333333;
+	    background-color: #9a9b9c;
 	    background-image: url(../img/logo-fundo.png);
 	    background-position: center;
 	    background-repeat: no-repeat;
