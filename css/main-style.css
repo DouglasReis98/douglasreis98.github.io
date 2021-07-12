@@ -212,7 +212,6 @@ box-sizing: border-box; border:none; outline: none;
 .recentes{
 	width: 100%;
 	min-height: 100vh;
-	    padding: 60px;
 	    background-color: #333333;
 	    background-image: url(../img/logo-fundo.png);
 	    background-position: center;
