@@ -362,11 +362,11 @@ footer{
 	padding: 20px;
 	position: relative;
 	background-color: #333333;
-	background-image: url(../img/logo2-1.png);
-	background-position: right;
+	background-image: url(../img/logo-fundo.png);
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 900px;
-	background-blend-mode: color-burn; /*multiply*/
+	background-size: 90%;
+	background-blend-mode: multiply;
 	margin-top: 70px;
 }
 
