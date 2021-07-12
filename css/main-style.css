@@ -219,7 +219,6 @@ box-sizing: border-box; border:none; outline: none;
 	    background-size: 90%;
 	    background-blend-mode: multiply;
 	    position: relative;
-	filter: invert(100%);
 }
 
 .recentes h2{
