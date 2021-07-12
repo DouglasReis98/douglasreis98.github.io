@@ -390,10 +390,6 @@ footer{
 }
 
 .sobre h2{
-	animation: neon 2s alternate infinite ease-in-out;
-}
-
-.sobre h2{
 	text-align: left;
 	text-transform: uppercase;
 	color: #00ccff;
@@ -401,6 +397,7 @@ footer{
 	font-size: 2.5em;
 	font-family: Trebuchet MS, sans-serif;
 	font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
 }
 
 .sobre h3{
@@ -460,13 +457,15 @@ footer{
 }
 
 .servicos h2{
-	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
-box-sizing: border-box; border:none; outline: none;
-	text-align: center;
-	text-transform: uppercase;
-	color: black;
-	font-size: 2em;
-	padding-bottom: 5px;
+	    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
+
 }
 
 .caixa_serv{
@@ -514,13 +513,15 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .portfolio h2{
-	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
-box-sizing: border-box; border:none; outline: none;
-	text-align: center;
-	text-transform: uppercase;
-	color: black;
-	font-size: 2em;
-	padding-bottom: 5px;
+	    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
+
 }
 
 .portfolio img{
@@ -546,14 +547,15 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .contato h2{
-	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
-box-sizing: border-box; border:none; outline: none;
-	text-align: center;
-	text-transform: uppercase;
-	color: black;
-	font-size: 2em;	
+    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
 
-	margin-bottom: 30px;
 }
 
 .contato table{
