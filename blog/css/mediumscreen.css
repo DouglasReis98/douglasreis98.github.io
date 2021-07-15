@@ -122,6 +122,11 @@
   margin: 20px 0 10px 20px;/*topo, direita, inferior, esquerda*/
 }
 
+#disqus_thread {
+    width: 90%;
+    margin: 20px 0 10px 20px;
+}
+
 /*----------CONTATO----------*/
 
 .contato{
