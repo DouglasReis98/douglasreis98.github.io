@@ -82,8 +82,7 @@ display: flex;
 		margin: 20px 0 10px 60px;/*topo, direita, inferior, esquerda*/
 		float: left;
 		justify-content: center;
-		border: 5px solid lightblue;
-		border-radius: 20px;
+		border-bottom: 1px solid lightblue;
 	}
 
 	#conteudo img /*h2*/{
@@ -91,7 +90,6 @@ display: flex;
 		margin-top: 15px;
 		margin-right: auto;
 		margin-left: auto;
-		padding: 15px;
 	}
 
 	#conteudo h3{
