@@ -81,10 +81,7 @@
 		width: 95%;
 		height: auto;
 		margin: 10px 10px 5px 10px;/*topo, direita, inferior, esquerda*/
-
 		justify-content: center;
-		border: 5px solid lightblue;
-		border-radius: 20px;
 	}
 
 	#conteudo img /*h2*/{

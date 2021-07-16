@@ -119,8 +119,6 @@ display: flex;
 /*ÚLTIMOS ARTIGOS*/
 
 	.ultimos-artigos{
-		border: 5px solid lightblue;
-		border-radius: 20px;
 		width: 100%;
 		height: auto;
 		padding-bottom: 5px;
@@ -131,7 +129,8 @@ display: flex;
 		text-align: center;
 		font-size: 1.2em;
 		padding: 5px;
-		color: blue;
+		color: #4463e8;
+		border-bottom: 1px solid lightblue;
 	}
 
 	.ultimos-artigos p{
@@ -142,8 +141,6 @@ display: flex;
 
 /*PUBLICIDADE*/
 	.publicidade{
-		border: 5px solid lightblue;
-		border-radius: 20px;
 		width: 100%;
 		height: auto;
 		margin-bottom: 5px;
@@ -154,7 +151,8 @@ display: flex;
 		text-align: center;
 		font-size: 1.2em;
 		padding: 5px;
-		color: blue;
+		color: #4463e8;
+		border-bottom: 1px solid lightblue;
 	}
 
 /*RODAPÉ*/

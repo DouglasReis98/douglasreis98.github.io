@@ -4,10 +4,6 @@
 		width: 60%;
 		height: auto;
 		margin: 40px 0 5px 45px;/*topo, direita, inferior, esquerda*/
-		float: left;
-		justify-content: center;
-		border: 5px solid lightblue;
-		border-radius: 20px;
 	}
 
 	#conteudo img /*h2*/{
