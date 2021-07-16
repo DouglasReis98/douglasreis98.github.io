@@ -94,18 +94,18 @@ display: flex;
 
 	#conteudo h3{
 		font-size: 2em;
-		margin: 10px;
+		10px 0px 10px 0px
 	}
 
 	#conteudo p{
 		font-family: Trebuchet MS;
 		font-size: 1em;
-		margin: 10px;
+		margin: 10px 0px 10px 0px;
 	}
 
 	#conteudo h5{
 		font-size: 1em;
-		margin: 10px;
+		margin: 10px 0px 10px 0px;
 	}
 
 /*---------ABA LATERAL----------*/
