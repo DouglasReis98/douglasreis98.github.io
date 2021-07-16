@@ -93,7 +93,7 @@ display: flex;
 
 	#conteudo h3{
 		font-size: 2em;
-		10px 0px 10px 0px
+		margin: 10px 0px 10px 0px;
 	}
 
 	#conteudo p{
