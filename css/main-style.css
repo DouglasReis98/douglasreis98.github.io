@@ -7,11 +7,15 @@
 	font-family:subtitulo;
 	src:url(../fontes/Teko-Medium.woff);
 }
+@font-face{
+	font-family:padrao;
+	src:url(../fontes/franklin-gothic.woff);
+}
 /*RESET*/
 *{
 	margin:0;
 	padding: 0;
-	font-size:100%; font-family: Franklin Gothic, sans-serif; font-weight: normal;
+	font-size:100%; font-family: padrao; font-weight: normal;
 box-sizing: border-box; border:none; outline: none;
 }
 
