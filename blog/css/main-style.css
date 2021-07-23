@@ -77,14 +77,14 @@ display: flex;
 padding: .5rem;
 }
 
-#btn-pesquisa{
-background-color: green;	
-}
-
 #pesquisa{
 background-color: blue;
 border: solid 1px;
 border-radius: 15px;
+}
+
+#btn-pesquisa{
+background-color: green;	
 }
 /*CONTEÚDO*/
 
