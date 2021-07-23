@@ -74,14 +74,16 @@ display: flex;
 }
 
 #aba-busca{
-padding: .5rem;
+padding: .3rem;
 }
 
 #pesquisa{
-background-color: #5788f8;
-border: solid 1px;
-border-radius: 15px;
-color: white;
+    background-color: #5788f8;
+    border: solid 1px;
+    border-radius: 15px;
+    color: white;
+    padding: 2px;
+    width: 13em;
 }
 
 ::placeholder{
