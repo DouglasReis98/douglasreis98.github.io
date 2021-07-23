@@ -84,7 +84,7 @@ border-radius: 15px;
 color: white;
 }
 
-#pesquisa p{
+::placeholder{
 color: white;
 }
 
