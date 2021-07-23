@@ -74,10 +74,14 @@ display: flex;
 }
 
 #aba-busca{
-background-color: red;
 padding: .5rem;
 }
 
+#pesquisa{
+background-color: blue;
+border: solid 1px;
+border-radius: 15px;
+}
 /*CONTEÚDO*/
 
 
