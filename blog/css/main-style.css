@@ -80,7 +80,7 @@ padding: .3rem;
 #pesquisa{
     background-color: #5788f8;
     border: solid 1px;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     color: white;
     padding: 2px;
     width: 13em;
@@ -91,7 +91,11 @@ color: white;
 }
 
 #btn-pesquisa{
-background-color: green;	
+    background-color: #004eff;
+    padding: 2px;
+    border: solid 1px;
+    border-radius: 0 15px 15px 0;
+    color: white;
 }
 /*CONTEÚDO*/
 
