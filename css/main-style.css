@@ -580,8 +580,8 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .projeto img{
-	width: 380px; 
-	height: 240px;
+	max-width: 65%; 
+	max-height: 65%;
 	float: left;
 }
 
@@ -592,7 +592,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .cont-projeto{
-	width: 80%;
+	width: 90%;
 	height: 90%;
 	background-color: red;
 	padding: 10px;
@@ -603,9 +603,14 @@ box-sizing: border-box; border:none; outline: none;
 
 #descricao-projeto{
 	float: right;
-	width: 50%;
+	width: 40%;
 }
 
+#dados-projeto{
+	float: right;
+	clear: both;
+	width: 40%;
+}
 
 /*-----------------------------------------CONTATO-----------------------------------------*/
 .contato {
