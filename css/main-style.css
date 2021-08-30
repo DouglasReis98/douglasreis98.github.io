@@ -549,6 +549,11 @@ box-sizing: border-box; border:none; outline: none;
 	margin-bottom: 5px;
 }
 
+.cont-portfolio{
+	background-color: red;
+
+}
+
 /*-----------------------------------------PROJETO---------------------------------------*/
 
 .projeto {
