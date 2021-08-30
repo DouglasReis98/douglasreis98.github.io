@@ -541,6 +541,7 @@ box-sizing: border-box; border:none; outline: none;
 .portfolio img{
 	width: 380px; 
 	height: 240px;
+	background-color: red;
 }
 
 .portfolio h3{
@@ -550,8 +551,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .cont-portfolio{
-	background-color: red;
-
+	background-color: blue;
 }
 
 /*-----------------------------------------PROJETO---------------------------------------*/
