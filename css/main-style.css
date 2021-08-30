@@ -553,6 +553,7 @@ box-sizing: border-box; border:none; outline: none;
 	margin: auto;
 	display: flex;
     	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .cont-portfolio{
