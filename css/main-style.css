@@ -549,7 +549,11 @@ box-sizing: border-box; border:none; outline: none;
 	margin-bottom: 5px;
 }
 
-.cont-portfolio{
+#projetos{
+	
+}
+
+.cont-projetos{
 	background-color: blue;
 }
 
