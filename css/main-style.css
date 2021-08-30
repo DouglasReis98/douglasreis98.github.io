@@ -556,7 +556,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 }
 
-#cont-portfolio{
+.cont-portfolio{
 	width: auto;
 	height: auto;
 }
