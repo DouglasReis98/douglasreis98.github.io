@@ -549,7 +549,8 @@ box-sizing: border-box; border:none; outline: none;
 	margin-bottom: 5px;
 }
 
-#projetos{	
+#projetos{
+	margin: auto;
 }
 
 #cont-portfolio{
