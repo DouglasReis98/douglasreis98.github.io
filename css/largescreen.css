@@ -42,3 +42,71 @@
 .contato table td #mensagem{
 	height: 22em;
 }
+
+/*-----------------------------------------PROJETO---------------------------------------*/
+/*
+.projeto {
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	background-color: #507192;
+	background-image: url(../img/logo-fundo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-blend-mode: color-dodge;
+}
+*/
+.projeto h2{
+	    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
+
+}
+
+.projeto img{
+	max-width: 50%; 
+	max-height: 50%;
+	float: left;
+}
+
+.projeto h3{
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.cont-projeto{
+	width: 90%;
+	height: 90%;
+	padding: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#descricao-projeto{
+	float: right;
+	width: 45%;
+}
+
+#dados-projeto{
+	float: right;
+	clear: both;
+	padding: 20px 0 20px 0;
+	width: 45%;
+}
+
+
+#dados-projeto span{
+	font-weight: bold;
+}

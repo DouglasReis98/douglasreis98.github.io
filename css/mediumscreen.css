@@ -128,3 +128,25 @@
 	width: 18em;
 	height: 22em;
 }
+
+/*-----------------------------------------PROJETO---------------------------------------*/
+
+.projeto img{
+  max-width: 50%; 
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+#descricao-projeto{
+  float: none;
+  width: 45%;
+}
+
+#dados-projeto{
+  float: none;
+  clear: both;
+  padding: 20px 0 20px 0;
+  width: 45%;
+}
