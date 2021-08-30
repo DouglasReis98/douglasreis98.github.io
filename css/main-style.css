@@ -591,6 +591,10 @@ box-sizing: border-box; border:none; outline: none;
 	margin-bottom: 5px;
 }
 
+#dados-projeto span{
+	font-weight: bold;
+}
+
 .cont-projeto{
 	width: 90%;
 	height: 90%;
