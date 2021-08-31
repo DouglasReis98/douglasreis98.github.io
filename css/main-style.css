@@ -594,9 +594,10 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .projeto-img{
-	max-width: 65%; 
-	max-height: 65%;
-	float: left;
+    max-width: 50%;
+    height: auto;
+    float: left;
+    position: absolute;
 }
 
 .projeto-img img{
