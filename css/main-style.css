@@ -593,10 +593,15 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.projeto img{
+.projeto-img{
 	max-width: 65%; 
 	max-height: 65%;
 	float: left;
+}
+
+.projeto-img img{
+	width: 100%;
+	height: auto;
 }
 
 .projeto h3{
