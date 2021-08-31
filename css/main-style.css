@@ -629,7 +629,8 @@ box-sizing: border-box; border:none; outline: none;
 #dados-projeto{
 	float: right;
 	clear: both;
-	width: 40%;
+	padding: 20px 0 20px 0;
+	width: 45%;
 }
 
 
