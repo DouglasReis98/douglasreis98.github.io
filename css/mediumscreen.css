@@ -131,18 +131,20 @@
 
 /*-----------------------------------------PROJETO---------------------------------------*/
 
-.projeto img{
-  max-width: 50%; 
-  max-height: 50%;
+.cont-projeto {
+  text-align: center;
+}
+
+.cont-projeto img{
   margin-left: auto;
   margin-right: auto;
   float: none;
-  text-align: center;
+
 }
 
 #descricao-projeto{
   float: none;
-  width: 45%;
+  width: 100%;
 }
 
 #dados-projeto{
@@ -150,4 +152,5 @@
   clear: both;
   padding: 20px 0 20px 0;
   width: 45%;
+  text-align: justify;
 }

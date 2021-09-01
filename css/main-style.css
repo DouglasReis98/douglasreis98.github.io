@@ -593,7 +593,7 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.projeto img{
+.cont-projeto img{
 	max-width: 65%; 
 	max-height: 65%;
 	float: left;
@@ -617,6 +617,7 @@ box-sizing: border-box; border:none; outline: none;
 #descricao-projeto{
 	float: right;
 	width: 40%;
+	text-align: justify;
 }
 
 #dados-projeto{
