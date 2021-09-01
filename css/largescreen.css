@@ -73,12 +73,6 @@
 
 }
 
-.projeto img{
-	max-width: 50%; 
-	max-height: 50%;
-	float: left;
-}
-
 .projeto h3{
 	font-size: 1.5em;
 	margin-top: 5px;
@@ -94,18 +88,21 @@
 	margin-right: auto;
 }
 
+.projeto-img{
+    max-width: 50%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
 #descricao-projeto{
 	float: right;
 	width: 45%;
 }
 
 #dados-projeto{
-	float: right;
-	clear: both;
-	padding: 20px 0 20px 0;
 	width: 45%;
 }
-
 
 #dados-projeto span{
 	font-weight: bold;
