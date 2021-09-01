@@ -593,12 +593,6 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.cont-projeto img{
-	max-width: 65%; 
-	max-height: 65%;
-	float: left;
-}
-
 .projeto h3{
 	font-size: 1.5em;
 	margin-top: 5px;
@@ -614,6 +608,12 @@ box-sizing: border-box; border:none; outline: none;
 	margin-right: auto;
 }
 
+.projeto-img{
+	width: 55%;
+	float: left;
+}
+
+
 #descricao-projeto{
 	float: right;
 	width: 40%;
@@ -624,6 +624,7 @@ box-sizing: border-box; border:none; outline: none;
 	float: right;
 	clear: both;
 	width: 40%;
+	padding: 10px 0 0 0 ;
 }
 
 

@@ -131,15 +131,9 @@
 
 /*-----------------------------------------PROJETO---------------------------------------*/
 
-.cont-projeto {
-  text-align: center;
-}
-
-.cont-projeto img{
-  margin-left: auto;
-  margin-right: auto;
+.projeto-img{
   float: none;
-
+text-align: center;
 }
 
 #descricao-projeto{
