@@ -540,7 +540,7 @@ box-sizing: border-box; border:none; outline: none;
 
 .cont-portfolio img{
 	width: 380px; 
-	height: 240px;
+	height: auto;
 }
 
 .cont-portfolio h3{
