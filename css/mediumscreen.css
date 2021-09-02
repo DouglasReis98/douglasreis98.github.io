@@ -137,6 +137,10 @@
   margin-right: auto;
 }
 
+.projeto-img img {
+    max-width: 200%;
+}
+
 #descricao-projeto{
   float: none;
   width: 100%;
