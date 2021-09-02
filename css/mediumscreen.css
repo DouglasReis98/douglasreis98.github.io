@@ -133,7 +133,8 @@
 
 .projeto-img{
   float: none;
-text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #descricao-projeto{
