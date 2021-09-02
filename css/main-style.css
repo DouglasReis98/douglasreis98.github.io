@@ -538,12 +538,12 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.portfolio img{
+.cont-portfolio img{
 	width: 380px; 
 	height: 240px;
 }
 
-.portfolio h3{
+.cont-portfolio h3{
 	font-size: 1.5em;
 	margin-top: 5px;
 	margin-bottom: 5px;
