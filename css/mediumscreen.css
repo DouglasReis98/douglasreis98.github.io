@@ -129,12 +129,15 @@
 	height: 22em;
 }
 
+/*-----------------------------------------PORTFÓLIIO---------------------------------------*/
+
+.projeto {
+    height: auto;
+
 /*-----------------------------------------PROJETO---------------------------------------*/
 
 .projeto-img{
   float: none;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .projeto-img img {
