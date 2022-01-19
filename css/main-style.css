@@ -380,17 +380,39 @@ footer{
 }
 
 .sobre .foto{
-	display: block;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
-	margin-bottom: 20px;
-	box-shadow: 5px 5px 5px grey;
+	margin-bottom: 40px;
 	width: 200px;
 	height: 200px;
+	text-align: center;
+
+}
+
+.foto img{
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;	
+	animation: foto 0.5s ease-in-out;	
+	width: 100%;
+	height: 100%;		
+	border-radius: 100px;
+	box-shadow: 1px 1px 20px black;	
+}
+
+@keyframes foto {
+	from{
+		width: 0;
+		height: 0;
+		opacity: 0;
+	};
+
+	to{
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	};
+	
 }
 
 .sobre h2{
@@ -541,12 +563,22 @@ box-sizing: border-box; border:none; outline: none;
 .cont-portfolio img{
 	width: 380px; 
 	height: auto;
+	/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+	animation: cont-opacity 1s linear normal;
 }
 
 .cont-portfolio h3{
 	font-size: 1.5em;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	animation: cont-opacity 1s linear normal;
+}
+
+.cont-portfolio h5{
+	font-size: 1em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	animation: cont-opacity 1s linear normal;
 }
 
 #projetos{
@@ -559,7 +591,19 @@ box-sizing: border-box; border:none; outline: none;
 .cont-portfolio{
 	width: auto;
 	height: auto;
-    	padding: 10px;
+    padding: 10px;
+	
+}
+
+@keyframes cont-opacity {
+	from {
+		opacity: 0;
+	};
+
+	to{
+		opacity: 1;
+	};
+	
 }
 
 
