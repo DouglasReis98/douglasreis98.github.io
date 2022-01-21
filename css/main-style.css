@@ -561,7 +561,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .cont-portfolio img{
-	width: 380px; 
+	width: 320px; 
 	height: auto;
 	/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
 	animation: cont-opacity 1s linear normal;
@@ -584,15 +584,16 @@ box-sizing: border-box; border:none; outline: none;
 #projetos{
 	margin: auto;
 	display: flex;
-    	flex-wrap: wrap;
+    flex-wrap: wrap;
 	justify-content: space-around;
+	max-width: 1100px;
 }
 
 .cont-portfolio{
 	width: auto;
 	height: auto;
     padding: 10px;
-	
+	justify-content: left;
 }
 
 @keyframes cont-opacity {
