@@ -20,4 +20,14 @@ $(document).ready(function(){
 		}
 	})();
 
-});
+function isOnScreen(element) {
+	var win = $(window);
+	
+	var screenTop = win.scrollTop();
+	var screenBottom = screenTop + win.height();
+
+	var elementTop = element.offset().top;
+	var elementBottom = elementTop + element.height();
+
+	return elementBottom > screenTop && elementTop < screenBottom;
+}
