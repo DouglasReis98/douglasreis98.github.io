@@ -109,6 +109,14 @@
 	font-size: 0.9em;
 }
 
+/*----------PORTFOLIO----------*/
+.cont-portfolio{
+  width: 100%;
+  height: 320px;
+  margin: 1.5%;
+  text-align: justify;
+}
+
 /*----------CONTATO----------*/
 
 .contato{
