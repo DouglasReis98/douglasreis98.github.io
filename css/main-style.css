@@ -111,7 +111,7 @@ box-sizing: border-box; border:none; outline: none;
 /*OI, MUITO PRAZER!!*/
 .apresentacao{
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	padding: 60px;
 	background-color: #333333;
 	background-image: url(../img/logo-fundo.png);
@@ -139,6 +139,7 @@ box-sizing: border-box; border:none; outline: none;
 	margin-bottom: 20px;
 	width: 200px;
 	height: 200px;
+	text-align: center;
 }
 
 .foto{
@@ -148,17 +149,16 @@ box-sizing: border-box; border:none; outline: none;
 	box-shadow: 1px 1px 20px black;	
 	opacity: 0;
 	width: 0;
-	height: auto;
 	transition: .3s;	text-align: center;
-
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
 }
 
 .foto-on{
 	width: 100%;
 	opacity: 1;
-	top: 50%;
-	position: relative;
-	transform: translateY(-50%);
+
 }
 
 @keyframes neon{
@@ -231,7 +231,7 @@ box-sizing: border-box; border:none; outline: none;
 /*TRABALHOS RECENTES*/
 .recentes{
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	    background-color: #15172f;
 	    background-image: url(../img/logo-fundo.png);
 	    background-position: center;
@@ -267,12 +267,13 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .img-recentes{
-	margin: 5px;
+	margin: 5px;	
+	width: 420px;
+	height: auto;
 }
 
 .img-recentes img{
-	width: 25em;
-	height: 16em;
+
 }
 
 
@@ -740,7 +741,6 @@ box-sizing: border-box; border:none; outline: none;
 
 .btn {
 	padding: 5px;
-	font-weight: bold;
 	border-radius: 5px;
 	background-color: #2860ff;
 	color: white;
