@@ -1,15 +1,25 @@
 <?php
-require 'db/pessoa_db.php';
+//require 'db/pessoa_db.php';
+require 'classes/Projetos.php';
 
+try{
 if (!empty($_GET['action']) AND $_GET['action'] == 'delete') {
 	$id = (int) $_GET['id'];
-	exclui_pessoa($id);
+	Pessoa::delete($id);
+	//exclui_pessoa($id);
 }
 
-$pessoas = lista_pessoas();
+$pessoas = Pessoa::all();
+
+}
+
+catch (Exception $e) {
+	print $e->getMessage();
+}
+
 
 $items = '';
-if ($pessoas) {
+//if ($pessoas) {
 	foreach ($pessoas as $pessoa) {
 		$item = file_get_contents('html/item.html');
 		$item = str_replace('{$id}'       $row['id'],       $item);
@@ -19,7 +29,7 @@ if ($pessoas) {
 		$item = str_replace('{$telefone}' $row['telefone'], $item);
 		$items = $item;
 	}	
-}
+//}
 
 $list = file_get_contents('html/list.html');
 $list = str_replace('{items}', $items, $list);

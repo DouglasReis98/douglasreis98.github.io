@@ -1,24 +1,27 @@
 <?php
-require_once 'projetos.db';
+//require_once 'projetos.db';
+require_once 'classes/Pessoa.php';
+require_once 'classes/Cidade.php';
 
 if (!empty($_REQUEST['action'])){
+    
+    try{
     if (!$_REQUEST['action'] == 'edit') {
         $id     = (int) $_GET['id'];
-        $pessoa = get_pessoa($id); 
+        $pessoa = Pessoa::find($id); 
     }
 
     else if ($_REQUEST['action'] == 'save') {
         $pessoa = $_POST;
-        if (empty($_POST['id'])) {
-            $pessoa['id'] = get_next_pessoa();
-            $result = insert_pessoa($pessoa);
-        }
-        else {
-            $result = update_pessoa($pessoa);
-        }
-        print ($result) ? 'Registrado salvo com sucesso' : 'Problemas ao salvar';
+        Pessoa::save($pessoa);
+        print "Pessoa salva com sucesso!";
     }
 }
+    catch(Exception $e){
+        print $e->getMessage();
+    }
+}
+
 else {
     $pessoa = [];
     $pessoa['id']        = '';
@@ -39,7 +42,13 @@ $form = str_replace('{bairro}',    $pessoa['bairro'],    $form);
 $form = str_replace('{telefone}',  $pessoa['telefone'],  $form);
 $form = str_replace('{email}',     $pessoa['email'],     $form);
 $form = str_replace('{id_cidade}', $pessoa['id_cidade'], $form);
-$form = str_replace('{cidades}',   lista_combo_cidades( $pessoa['id_cidade'] ), $form);
+
+$cidades = '';
+foreach (Cidade::all() as $cidade){
+    $check = ($cidade['id'] == $pessoa['id_cidade']) ? "selected=1 : ''";
+    $cidade .= "<option $check value='{$cidade['id']}'> {$cidade['nome']} </option>";
+}
+$form = str_replace('{cidade}', $cidades, $form);
 print $form;
 
 ?>
