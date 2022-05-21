@@ -110,6 +110,10 @@
 }
 
 /*TRABALHOS RECENTES*/
+.recentes h2{
+  font-size: 2em; 
+}
+
 .recentes{
   height: auto;
 }
