@@ -51,9 +51,6 @@
 }
 
 /*TRABALHOS RECENTES*/
-.recentes{
-
-}
 
 .recentes h2{
 	font-size: 1.8em;
@@ -67,15 +64,6 @@
 	padding: 5px;
 	height: auto;
 	margin: 0 auto;
-}
-
-.img-recentes{
-	margin-bottom: 40px;
-}
-
-.img-recentes img{
-	width: 95%;
-	height: 95%;	
 }
 
 /*----------CONTATO----------*/

@@ -268,12 +268,8 @@ box-sizing: border-box; border:none; outline: none;
 
 .img-recentes{
 	margin: 5px;	
-	width: 420px;
+	width: 30%;
 	height: auto;
-}
-
-.img-recentes img{
-
 }
 
 

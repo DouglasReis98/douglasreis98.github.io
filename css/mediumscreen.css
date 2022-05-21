@@ -109,6 +109,17 @@
 	font-size: 0.9em;
 }
 
+/*TRABALHOS RECENTES*/
+.recentes{
+  height: auto;
+}
+
+.img-recentes{
+  width: 60%;
+  margin: 15px auto;
+  height: auto;
+}
+
 /*----------PORTFOLIO----------*/
 .cont-portfolio{
   width: 100%;
