@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a{
@@ -13,117 +13,104 @@ a:visited{
     color: currentColor;
 }
 
+a:hover{
+    color: rgb(0, 119, 255);
+}
+
 body{
-    background-image: url("../../img/fundo.png");
+    background-image: url("../../img/logo-fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: black;
+    background-color: rgb(0, 81, 148);
     background-attachment: fixed;
+    background-position: center;
+    background-blend-mode:overlay;
+    background-size: 60%;
 }
 
-header{
-    margin: 0 auto;
-    text-align: center;
-}
 
 #banner{
-    margin: 20px auto;
+    width: 30%;
+    margin: 0 auto;
+
 }
 
 #banner img{
-    width: 85%;
+    width: 100%;
 }
 
 h1{
-    color: white;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    color: rgb(0, 12, 116);
+    font-size: 2.5rem;
 }
 
 #formulario{
-    margin: 10px auto;
-    width: fit-content;
-    background-color: black;
+    color: #fff;
+    margin: 30px auto;
+    background-color: rgb(0, 63, 99);
+    width: 20%;
+    padding: 20px;
     border-radius: 10px;
-    padding: 30px;
+    text-align: center;
 }
 
 #formulario input{
-    width: 350px;
-    height: 30px
+    width: 100%;
 }
 
 #formulario button{
-    width: 100%;
-    margin: 10px 0;
-    height: 50px;
-    border-radius: 10px;
-    background-color: gold;
-    color: black;
-    font-size: 1.5em;
-}
-
-table{
-    width: 60%;    
+    width: 80%;
+    height: 40px;
     margin: 10px auto;
-
-}
-
-
-table, th, tr{
-    border: 1px solid white;
-    color: gold;
-    text-shadow: 1px 1px black;
-    text-align: center;
-    border-collapse: collapse;
-    font-size: 1em;
-}
-
-a:hover{
-    color: darkgoldenrod;
-}
-
-table td{
-    border: 1px solid white;
-    border-collapse: collapse;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-    text-shadow: 1px 1px black;
-}
-
-#formulario-criar{
-    margin: 20px auto;
-    width: 50%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
     border-radius: 10px;
-}
-
-#formulario-criar input{
-    width: 70%;
+    background-color: rgb(107, 225, 255);
     font-size: 1em;
-}
-
-#formulario-criar textarea{
-    width: 70%;
-    height: 300px;
-}
-
-#formulario-criar button{
-    width: 40%;
-    background-color: gold;
-    border-radius: 10px;
-    height: 50px;
-    font-size: 1.2em;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
-#formulario-criar select{
-    width: 100px;
-    text-align: center;
+table, th, tr, td{
+    border: 1px solid white;
+    border-collapse: collapse;
 }
+
+#lista-posts{
+    width: 95%;
+    margin: 10px auto;
+    color: #fff;  
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#criar-projeto{
+    width: 30%;
+    margin: 20px auto;
+    background-color: rgb(0, 110, 255);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+#criar-projeto input:not(#data){
+    width: 100%;
+}
+
+#criar-projeto textarea{
+    width: 100%;
+    height: 200px;
+}
+
+#concluir{
+    margin: 20px auto;   
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: rgb(23, 38, 124);
+    color: white;
+    font-weight: bold;
+
+}
+
