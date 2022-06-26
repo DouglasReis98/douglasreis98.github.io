@@ -133,32 +133,49 @@ box-sizing: border-box; border:none; outline: none;
 
 .cont-foto{
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 40px;
-	margin-bottom: 20px;
-	width: 200px;
-	height: 200px;
+	margin: 40px auto 20px auto;
+	width: 400px;
+	height: auto;
 	text-align: center;
+	background-color: yellow;
+	float: left;
 }
 
 .foto{
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;	
-	box-shadow: 1px 1px 20px black;	
-	opacity: 0;
-	width: 0;
-	transition: .3s;	text-align: center;
-	top: 50%;
+	text-align: center;
 	position: relative;
-	transform: translateY(-50%);
+	/*transform: translateY(-50%);*/
 }
 
-.foto-on{
-	width: 100%;
-	opacity: 1;
+.cont-sobre{
+float: right;
+width: 600px;
+height: 300px;
+background-color: #2860ff;
+margin: 40px auto 20px auto;
 
+}
+
+[data-animar]{
+	opacity: 0;
+	transition: .3s;
+}
+
+[data-animar="left"]{
+	transform: translate3d(-50px, 0, 0);
+}
+
+[data-animar="right"]{
+	transform: translate3d(50px, 0, 0);
+}
+
+[data-animar="top"]{
+	transform: translate3d(0, -50px, 0);
+}
+
+[data-animar].animate{
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
 }
 
 @keyframes neon{
@@ -314,7 +331,6 @@ footer{
 .redes{
 	width: auto;
 	margin: 10px 2em 0;
-	clear: both;
 }
 
 .redes li{
@@ -369,6 +385,10 @@ footer{
 .fone-email li{
 	text-align: justify;
 	font-size: 1em;
+}
+
+#clearfix{
+	clear: both;
 }
 
 /*-----------------------------------------SOBRE MIM-----------------------------------------*/
