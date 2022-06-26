@@ -149,9 +149,14 @@ box-sizing: border-box; border:none; outline: none;
 .cont-sobre{
 float: right;
 width: 600px;
-height: 300px;
+height: 200px;
 background-color: #2860ff;
 margin: 40px auto 20px auto;
+align-items: center;
+padding: 10px;
+border-radius: 20px;
+display: flex;
+justify-content: center;
 }
 
 [data-animar]{
