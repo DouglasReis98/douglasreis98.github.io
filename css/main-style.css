@@ -154,19 +154,6 @@ height: 300px;
 background-color: #2860ff;
 margin: 40px auto 20px auto;
 }
-/*
-.reveal{
-	position: relative;
-	transform: translateY(150px);
-	opacity: 0;
-	transition: all .3s ease;
-}
-
-.reveal{
-	transform: translateY(0);
-	opacity: 1;
-}
-*/
 
 [data-animar]{
 	opacity: 0;
