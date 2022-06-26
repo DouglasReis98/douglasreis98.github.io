@@ -9,7 +9,7 @@
 // 5 - Otimizar ativação
 
 //Debounce do Lodash
-const debounce = function (func, wait, immediate) {
+/*const debounce = function (func, wait, immediate) {
 	let timeout;
 	return function (...args) {
 		const context = this;
@@ -46,4 +46,24 @@ if (target.length) {
 		animaScroll();
 		console.log('ativa-funcao')
 	}, 200))
+}*/
+
+
+window.addEventListener('scroll', reveal)
+
+function reveal(){
+	let reveals = document.querySelectorAll('[data-animar]')
+
+	for (let i = 0; i < reveals.length; i++) {
+		 
+		let windowHeight = window.innerHeight;
+		let revealTop = reveals[i].getBoundingClientRect().top;
+		let revealPoint = 350;
+
+		if (revealTop < windowHeight - revealPoint) {
+			reveals[i].classList.add('active');
+		} else {
+			reveals[i].classList.remove('active');
+		}
+	}
 }
