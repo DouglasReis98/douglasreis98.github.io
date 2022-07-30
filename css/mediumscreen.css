@@ -80,6 +80,11 @@
 }
 
 /*OI, MUITO PRAZER!!*/
+.apresentacao{
+	width: 100%;
+	height: auto;
+}
+
 .cont-foto{
 	background-color: #d9ff00;
   float: none;
