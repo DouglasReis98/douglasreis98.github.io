@@ -48,7 +48,7 @@ if (target.length) {
 	}, 200))
 }*/
 
-
+/*
 window.addEventListener('scroll', reveal)
 
 function reveal(){
@@ -67,3 +67,24 @@ function reveal(){
 		}
 	}
 }
+*/
+
+const item = document.querySelectorAll("[data-animar]")
+
+const animeScroll = () => {
+	const windowTop = window.pageYOffset + window.innerHeight - 1000
+
+	item.forEach(element => {
+		if (windowTop > element.offsetTop) {
+			element.classList.add("animate")
+		} else{
+			element.classList.remove("animate")
+		}
+	})
+}
+
+animeScroll()
+
+window.addEventListener("scroll", () => {
+	animeScroll()
+})
