@@ -33,6 +33,14 @@
 	background-color: #ff0000;
 }
 
+[data-animar="left"]{
+	transform: translate3d(50px, 0, 0);
+}
+
+[data-animar="right"]{
+	transform: translate3d(-50px, 0, 0);
+}
+
 /*---SOBRE---*/
 
 .sobre .foto{
