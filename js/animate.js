@@ -58,7 +58,7 @@ function reveal(){
 		 
 		let windowHeight = window.innerHeight;
 		let revealTop = reveals[i].getBoundingClientRect().top;
-		let revealPoint = 250;
+		let revealPoint = 180;
 
 		if (revealTop < windowHeight - revealPoint) {
 			reveals[i].classList.add(animationClass);
