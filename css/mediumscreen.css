@@ -79,10 +79,12 @@
 	font-size: 1.5em;
 }
 
-/*OI, MUITO PRAZER!!*/
-.apresentacao{
+/*SOBRE*/
+#sobre{
 	width: 100%;
 	height: auto;
+  padding: 20px 10px 20px 10px;
+
 }
 
 .cont-foto{
@@ -92,47 +94,48 @@
 }
 
 .cont-sobre{
-	width: 380px;
+	width: 25em;
   float: none;
   margin: 10px auto;
 }
 
-/*SOBRE*/
-.sobre{
-	height: 100%;
+#qualif {
+  width: auto;
+  float: none;
+  margin: 10px auto;
+  font-size: 1em;
 }
 
-.sobre #qualif .item-qualif{
- 	width: 300px;
+#qualif .item-qualif{
  	height: 100px;	
  	margin-bottom: 0;
 }
 
-.sobre #qualif .item-qualif img{
-	width: 90px; 
-	height: 90%;
+#qualif .item-qualif img{
+	width: 90px;
 }
 
-.servicos{
+#habilidades{
 	height: 100%;
 }
 
-.cont_serv{
+.cont_hab{
 	width: 400px;	
 	padding: 10px;
 }
 
-.cont_serv p{
+.caixa_hab{
+  margin-top: 10px;
+}
+/*
+.cont_hab p{
 	text-align: justify;
 	font-size: 0.9em;
 }
-
+*/
 /*TRABALHOS RECENTES*/
-.recentes h2{
-  font-size: 2em; 
-}
 
-.recentes{
+#portfolio{
   height: auto;
 }
 
@@ -145,34 +148,19 @@
 /*----------PORTFOLIO----------*/
 .cont-portfolio{
   width: 100%;
-  height: 320px;
   margin: 1.5%;
   text-align: justify;
+  margin: 0 auto;
 }
 
-/*----------CONTATO----------*/
+#contato form{
+	width: 80%;
 
-.contato{
-	height: 100%;
-}
-
-.contato table td #nome{
-	width: 18em;
-}
-
-.contato table td #email{
-	width: 18em;
-}
-
-.contato table td #mensagem{
-	resize: none;
-	width: 18em;
-	height: 22em;
 }
 
 /*-----------------------------------------PORTFÓLIIO---------------------------------------*/
 
-.projeto {
+#projeto {
     height: auto;
 }
 /*-----------------------------------------PROJETO---------------------------------------*/
@@ -192,7 +180,6 @@
 
 #dados-projeto{
   float: none;
-  clear: both;
   padding: 20px 0 20px 0;
   width: 100%;
   text-align: justify;

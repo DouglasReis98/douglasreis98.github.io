@@ -1,10 +1,10 @@
 /*CABEÇALHO*/
-.cabecalho {
+#cabecalho {
 	padding: 0px 5%;
 }
 
 /*---CENTRO---*/
-	.principal {
+	#principal {
 	background: url(../img/fundo-code.jpg);
 	background-size: 1000px;
 	background-repeat: no-repeat;
@@ -16,13 +16,13 @@
 	background-color: black;
 }
 
-	.principal video {
+	#principal video {
 	display: none;
 
 }
 
 /*OI, MUITO PRAZER!!*/
-.apresentacao h2{
+#sobre h2{
 	font-size: 1.8em;
 }
 .cont-sobre{
@@ -39,62 +39,63 @@
 	transform: translate3d(-50px, 0, 0);
 }
 
-/*---SOBRE---*/
-
-.sobre .foto{
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 150px;
-	height: 150px;
+#qualif{
+	font-size: .9em;
 }
 
-.sobre h3{
-	font-size: 1.2em;
+.item-qualif{
+	min-width: 23em;
 }
 
-/*---SERVIÇOS---*/
-.servicos{
+#qualif .item-qualif img {
+	min-width: 50px;
+	margin: 0 3px 0 3px;
+}
+
+/*---HABILIDADES---*/
+
+#habilidades h2{
+	font-size: 1.8em;
+}
+
+#habilidades{
 	height: auto;
 }
 
-.cont_serv{
+.cont_hab{
 	width: 300px;	
 }
 
-.cont_serv i{
+.cont_hab i{
 	text-align: center;
 	float: none;
 	font-size: 100px;
-	margin-left: 35%;
 }
 
-/*TRABALHOS RECENTES*/
+/*----------PORTFOLIO----------*/
 
-.recentes h2{
+#portfolio h2{
 	font-size: 1.8em;
-	font-weight: bold;
-	padding: 20px;
-}
-.box-recentes{
-	flex-wrap: wrap;
-	text-align: center;
-	justify-content: space-between;
-	padding: 5px;
-	height: auto;
-	margin: 0 auto;
 }
 
-/*----------CONTATO----------*/
+.cont-portfolio{
+	width: 100%;
+	margin: 1.5%;
+	text-align: justify;
+  }
+  
+  #contato form{
+	  width: 80%;
+  
+  }
 
-.contato table td #nome{
-	width: 16em;
+
+/*CONTATO*/
+#contato h2{
+	font-size: 1.8em;
 }
 
-.contato table td #email{
-	width: 16em;
-}
-
-.contato table td #mensagem{
-	width: 16em;
-	height: 22em;
+#contato form{
+	width: 100%;
+	padding: 0;
 }

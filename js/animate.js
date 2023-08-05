@@ -49,21 +49,20 @@ if (target.length) {
 }*/
 
 
-window.addEventListener('scroll', reveal)
+window.addEventListener('scroll', reveal)	//Adiciona um ouvinte de evento a janela do navegador, executando a função "reveal"
 
-function reveal(){
-	let reveals = document.querySelectorAll('[data-animar]')
-	const animationClass = 'animate'
-	for (let i = 0; i < reveals.length; i++) {
-		 
-		let windowHeight = window.innerHeight;
-		let revealTop = reveals[i].getBoundingClientRect().top;
-		let revealPoint = 180;
+function reveal(){	//declara a função "reveal"
+	let reveals = document.querySelectorAll('[data-animar]')	//declara a variável que obterá todos os elementos com o atributo "data-animar"
+	const animationClass = 'animate'		//declara a variável "animationClass" e atribui a classe "animate"
+	for (let i = 0; i < reveals.length; i++) {	//a variável "reveals" é incrementada a cada rolagem(scroll)
 
-		if (revealTop < windowHeight - revealPoint) {
-			reveals[i].classList.add(animationClass);
-		} else {
-			reveals[i].classList.remove(animationClass);
+		let windowHeight = window.innerHeight;		//declara a variável "windowHeight" e a atribui a altura (em pixels) da janela do navegador
+		let revealTop = reveals[i].getBoundingClientRect().top;	//declara a variável "revealTop" que obterá a posição dos elementos "reveals" em relação ao topo
+		let revealPoint = 180;		//declara um valor de referencia
+		if (revealTop < windowHeight - revealPoint) {	//se revealTop for menor que o resto da altura da tela do navegador e o valor de referencia...
+			reveals[i].classList.add(animationClass);	//...adicione a animação...
+		} else {										//...senão...
+			reveals[i].classList.remove(animationClass);//...remova a animação
 		}
 	}
 }

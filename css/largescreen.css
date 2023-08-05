@@ -1,73 +1,74 @@
 /*OI, MUITO PRAZER!!*/
 
-.cont-sobre{
-	width: 380px;
-	}
+body {
+	background-position: center center;
+}
 
-/*TRABALHOS RECENTES*/
+.cont-sobre {
+	width: 25rem;
+}
 
-.box-recentes{
+#qualif {
+	width: 25rem;
+	font-size: .8em;
+	height: auto;
+}
+
+#qualif .item-qualif img {
+	width: 70px;
+}
+
+.previous, .next{
+	font-size: 1rem;
+	height: auto;
+	line-height:  80px !important;
+
+}
+/*PORTFOLIO*/
+
+.box-recentes {
 	padding: 20px;
 	margin-top: 10px;
 }
 
-.img-recentes{
+.img-recentes {
 	width: 40%;
 	margin: 15px;
 	height: auto;
 }
 
-
 /*SOBRE*/
-.sobre{
-	height: 100%;
-}
-
-.sobre h2{
-	font-size: 1.5em;
+#sobre {
+	height: 100vh;
 }
 
 
-/*---SERVIÇOS---*/
-.servicos{
+/*---HABILIDADES---*/
+#habilidades {
 	height: auto;
-}
-
-/*----------CONTATO----------*/
-
-.contato{
-	height: 100%;
-}
-
-.contato table td #mensagem{
-	height: 22em;
 }
 
 /*-----------------------------------------PROJETO---------------------------------------*/
 
-.projeto {
-	height: 65vh;
-}
-
-.projeto h2{
-	    text-align: left;
-    text-transform: uppercase;
-    color: #00ccff;
-    --cor-neon: #00ccff;
-    font-size: 2.5em;
-    font-family: Trebuchet MS, sans-serif;
-    font-weight: bold;
+#projeto h2 {
+	text-align: left;
+	text-transform: uppercase;
+	color: #00ccff;
+	--cor-neon: #00ccff;
+	font-size: 2.5em;
+	font-family: Trebuchet MS, sans-serif;
+	font-weight: bold;
 	animation: neon 2s alternate infinite ease-in-out;
 
 }
 
-.projeto h3{
+#projeto h3 {
 	font-size: 1.5em;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
-.cont-projeto{
+#cont-projeto {
 	width: 90%;
 	height: 90%;
 	padding: 10px;
@@ -76,22 +77,16 @@
 	margin-right: auto;
 }
 
-.projeto-img{
-    max-width: 50%;
-    height: auto;
-    position: relative;
+#projeto-img {
+	max-width: 50%;
+	height: auto;
+	position: relative;
 }
 
-#descricao-projeto{
-	float: right;
+#dados-projeto {
 	width: 45%;
 }
 
-#dados-projeto{
-	width: 45%;
-	clear: both;
-}
-
-#dados-projeto span{
+#dados-projeto span {
 	font-weight: bold;
 }

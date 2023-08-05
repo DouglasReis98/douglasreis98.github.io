@@ -19,10 +19,21 @@
 box-sizing: border-box; border:none; outline: none;
 }
 
+	/*html{scroll-behavior: smooth;}*/
 	img{max-width: 100%;}
 	ul{list-style: none;}
-	a{text-decoration: none;}
+	a{text-decoration: none; color: currentColor;}
+	a:visited{text-decoration: none; color: currentColor;}
 
+	body{
+		background-color: #15172f;
+		background-image: url(../img/logo-fundo.png);
+		background-position: center 80%;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 80%;
+		background-blend-mode: multiply;
+	}
 /*-----------------------------------------INDEX-----------------------------------------*/
 /*CABEÇALHO*/
 #cabecalho{
@@ -71,7 +82,7 @@ box-sizing: border-box; border:none; outline: none;
 }
 /*CENTRO*/
 
-.principal {
+#principal {
 	width: 100%;
 	height: calc(100vh - 70px);
 	display: flex;
@@ -80,7 +91,7 @@ box-sizing: border-box; border:none; outline: none;
 	margin-top: 70px;
 }
 
-.principal video {
+#principal video {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -109,20 +120,20 @@ box-sizing: border-box; border:none; outline: none;
 	font-size: 3em;
 }
 /*OI, MUITO PRAZER!!*/
-.apresentacao{
+#sobre{
 	width: 100%;
 	height: 100vh;
 	padding: 20px 50px 20px 50px;
-	background-color: #333333;
+	/*background-color: #333333;
 	background-image: url(../img/logo-fundo.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 90%;
-	background-blend-mode: multiply;
+	background-blend-mode: multiply;*/
 	position: relative;
 }
 
-.apresentacao .texto{
+#sobre .texto{
 	text-align: center;
 }
 
@@ -148,12 +159,12 @@ box-sizing: border-box; border:none; outline: none;
 
 .cont-sobre{
 float: right;
-width: 500px;
+max-width: 30rem;
 height: auto;
 background-color: #2860ff;
-margin: 20px auto 20px auto;
+margin: 10px auto 10px auto;
 align-items: center;
-padding: 10px;
+padding: .5em;
 border-radius: 20px;
 }
 
@@ -194,11 +205,7 @@ text-align: justify;
 	}
 }
 
-.apresentacao h2{
-	animation: neon 2s alternate infinite ease-in-out;
-}
-
-.apresentacao h2{
+#sobre h2{
 	text-align: left;
 	text-transform: uppercase;
 	color: #00ccff;
@@ -206,97 +213,342 @@ text-align: justify;
 	font-size: 2.5em;
 	font-family: Trebuchet MS, sans-serif;
 	font-weight: bold;
-	padding: 30px;
+	padding: 30px;	
+	animation: neon 2s alternate infinite ease-in-out;
 }
 
-.apresentacao h3{
-	font-size: 1.5em;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-}
-
-.apresentacao p{
+#sobre p{
 	color: white;
 }
 
-.apresentacao #qualif{
+#qualif{
 	margin: 0 auto;
-	width: auto;
+	max-width: 30rem;
+	float: right;
+	color: white;
+	position: relative;
+}
+
+#wrapper-qualif{
+	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+#wrapper-qualif::-webkit-scrollbar {
+	display: none;
+  }
+
+.box-qualif{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-flow: row nowrap;
 }
 
-.apresentacao #qualif .item-qualif{
- 	width: 400px;
- 	height: 120px;
+.previous{
+	font-size: 2rem;
+	line-height:  100px !important;
+	cursor: pointer;
+	float: left;
+	z-index: 1;
+	color: #9cb9c0;
 }
 
-.apresentacao #qualif .item-qualif img{
+.next{
+	font-size: 2rem;
+	line-height:  100px !important;
+	cursor: pointer;
+	float: right;
+	right: 0;
+	z-index: 1;
+	color: #9cb9c0;
+}
+
+.previous:hover, .next:hover{
+	color: #fff;
+	transition: all 0.2s ease-in-out ;
+}
+
+.item-qualif{
+ 	min-width: 26em;
+	margin: 0 0 0 2em;
+}
+
+.item-qualif img{
 	display: inline;
 	float: left;
-	width: 120px; 
-	height: 100%;
+	width: 6em; 
+	height: auto;
+	filter: drop-shadow(0 0 1px white);
 }
 
-.apresentacao #qualif h4 {
+#qualif h3{
 	font-size: 1.2em;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	padding: 1rem;
+}
+
+#qualif h4 {
+	font-size: 1em;
 	font-weight: bold;
 	padding: 1.5px;
 }
 
-.apresentacao #qualif h5 {
+#qualif h5 {
 	font-style: italic;
 	padding: 3px;
 }
-
-/*TRABALHOS RECENTES*/
-.recentes{
+/*-------HABILIDADES-------*/
+#habilidades{
 	width: 100%;
 	height: 100vh;
 	padding: 20px 50px 20px 50px;
-	    background-color: #15172f;
+	position: relative;
+	/*background-color: #15172f;
 	    background-image: url(../img/logo-fundo.png);
 	    background-position: center;
 	    background-repeat: no-repeat;
 	    background-size: 90%;
-	    background-blend-mode: color-dodge;
-	    position: relative;
+	    background-blend-mode: color-dodge;*/
 }
 
-.recentes h2{
-	font-size: 2.5em; 
-	font-family: Trebuchet MS, sans-serif; 
-	font-weight: bold;
-	box-sizing: border-box; 
-	border:none; outline: none;
-	text-align: left;
-	text-transform: uppercase;
-	color: #00ccff;
-	--cor-neon: #00ccff;
-	padding: 30px;
+#habilidades h2{
+	  text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+    padding: 30px;	
+
 	animation: neon 2s alternate infinite ease-in-out;
 }
 
-.box-recentes{
-	width: auto;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 20px;
-	margin-top: 50px;
-
+#habilidades h3{
+	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
+box-sizing: border-box; border:none; outline: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.5em;
+	padding: 10px;
 }
 
-.img-recentes{
-	margin: 5px;	
+.caixa_hab{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px 0;
+	margin-top: 60px;
+	color: white;
+	width: auto;
+}
+
+.cont_hab{
+	width: auto;	
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.icon{
+		margin: 0 auto;
+		text-align: center;
+}
+
+.icon i{
+	font-size: 100px;
+	color: #447af3;
+}
+
+/*PORTFÓLIO*/
+#portfolio {
+	width: 100%;
+	min-height: 100vh;
+	padding: 20px 50px 20px 50px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: #507192;
+	background-image: url(../img/logo-fundo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-blend-mode: color-dodge;*/
+}
+
+#portfolio h2{
+	    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
+		padding: 30px;
+}
+
+.categorias{
+	width: 100%;
+	display: flex;
+}
+
+.categorias ul{
+	margin: 0 auto;
+}
+
+.categorias ul li{
+	display: inline;
+	margin: 0 30px 0 30px;
+	font-size: 1.2em;
+}
+
+.categorias a{
+	color: none;
+	color: rgb(204, 230, 255);
+}
+
+.categorias a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.categoria-selecionada{
+	color: white;
+	text-decoration: underline;
+}
+
+.cont-portfolio img{
+	width: auto; 
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+	animation: cont-opacity 1s linear normal;
+}
+
+.cont-portfolio h3{
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	animation: cont-opacity 1s linear normal;
+	color: white;
+}
+
+.cont-portfolio p{
+	font-size: 1em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	animation: cont-opacity 1s linear normal;
+	color: white;
+}
+
+#projetos{
+	margin: 0 auto;
+	display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.cont-portfolio{
 	width: 30%;
 	height: auto;
+ 	margin: 1.5%;
+	text-align: justify;
 }
 
+.cont-portfolio:hover{
+	filter: brightness(110%);
+}
+
+@keyframes cont-opacity {
+	from {
+		opacity: 0;
+	};
+
+	to{
+		opacity: 1;
+	};
+	
+}
+
+.paginacao{
+	margin: 5px auto;
+	text-align: center;	
+}
+
+.paginacao li, .paginacao li > a{
+	margin: 0 2px 0 4px;
+	color: #99ccff;
+	font-size: 1.2em;
+	text-shadow: 1px 1px black;
+	display: inline;
+}
+
+.paginacao li a:hover {
+	color: #fff;
+}
+
+
+/*CONTATO*/
+#contato {
+	width: 100%;
+	height: 100vh;
+	padding: 20px 50px 20px 50px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+#contato h2{
+    text-align: left;
+    text-transform: uppercase;
+    color: #00ccff;
+    --cor-neon: #00ccff;
+    font-size: 2.5em;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+	animation: neon 2s alternate infinite ease-in-out;
+		padding: 30px;
+}
+
+#contato form{
+	width: 50%;
+	margin:0 auto;
+	padding: 20px;
+}
+
+#contato  input, textarea {
+		border: 1px solid grey;
+}
+
+#contato label {
+	font-weight: bold;
+}
+
+#contato input[type=text]{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#contato #mensagem{
+	resize: none;
+	width: 100%;
+	height: 20em;
+}
+
+.btn {
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #2860ff;
+	color: white;
+}
 
 /*RODAPÉ*/
 footer{
@@ -399,247 +651,11 @@ footer{
 	clear: both;
 }
 
-/*-----------------------------------------SOBRE MIM-----------------------------------------*/
-
-.sobre{
-	width: 100%;
-	height: 100vh;
-	padding: 20px;
-	position: relative;
-	background-color: #333333;
-	background-image: url(../img/logo-fundo.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 90%;
-	background-blend-mode: multiply;
-	margin-top: 70px;
-}
-
-.sobre .texto{
-	text-align: center;
-
-}
-
-.sobre .cont-foto{
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	width: 200px;
-	height: 200px;
-	text-align: center;
-}
-
-.foto2{
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;	
-	width: 100%;	
-	border-radius: 100px;
-	box-shadow: 1px 1px 20px black;	
-	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.sobre h2{
-	text-align: left;
-	text-transform: uppercase;
-	color: #00ccff;
-	--cor-neon: #00ccff;
-	font-size: 2.5em;
-	font-family: Trebuchet MS, sans-serif;
-	font-weight: bold;
-	animation: neon 2s alternate infinite ease-in-out;
-}
-
-.sobre h3{
-	font-size: 1.5em;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-	color: #fff;
-}
-
-.sobre p{
-	color: white;
-}
-
-.sobre #qualif{
-	margin: 0 auto;
-	width: auto;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.sobre #qualif .item-qualif{
- 	width: 400px;
- 	height: 120px;
-}
-
-.sobre #qualif .item-qualif img{
-	display: inline;
-	float: left;
-	width: 120px; 
-	height: 100%;
-}
-
-.sobre #qualif h4 {
-	font-size: 1.2em;
-	font-weight: bold;
-	padding: 1.5px;
-	color: #fff;
-}
-
-.sobre #qualif h5 {
-	font-style: italic;
-	padding: 3px;
-	color: #fff;
-}
-
-/*-----------------------------------------SERVIÇOS-----------------------------------------*/
-.servicos{
-	width: 100%;
-	height: 100vh;
-	padding: 20px;
-	position: relative;;
-	margin-top: 70px;
-	background-color: #15172f;
-	    background-image: url(../img/logo-fundo.png);
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: 90%;
-	    background-blend-mode: color-dodge;
-}
-
-.servicos h2{
-	    text-align: left;
-    text-transform: uppercase;
-    color: #00ccff;
-    --cor-neon: #00ccff;
-    font-size: 2.5em;
-    font-family: Trebuchet MS, sans-serif;
-    font-weight: bold;
-	animation: neon 2s alternate infinite ease-in-out;
-}
-
-.caixa_serv{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 30px;
-	color: white;
-}
-
-.cont_serv{
-	width: 400px;	
-	padding: 10px;
-	margin-left: auto; 
-	margin-right: auto;
-}
-
-.cont_serv i{
-	float: left;
-	margin: 20px;
-	font-size: 150px;
-	color: #447af3;
-}
-
-.servicos h3{
-	font-size:100%; font-family:'Arial', sans-serif; font-weight: normal;
-box-sizing: border-box; border:none; outline: none;
-	text-align: center;
-	text-transform: uppercase;
-	color: white;
-	font-size: 1.5em;
-	padding: 10px;
-}
-
-/*-----------------------------------------PORTFÓLIO---------------------------------------*/
-.portfolio {
-	width: 100%;
-	height: auto;
-	padding: 20px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 70px;
-	background-color: #507192;
-	background-image: url(../img/logo-fundo.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 90%;
-	background-blend-mode: color-dodge;
-}
-
-.portfolio h2{
-	    text-align: left;
-    text-transform: uppercase;
-    color: #00ccff;
-    --cor-neon: #00ccff;
-    font-size: 2.5em;
-    font-family: Trebuchet MS, sans-serif;
-    font-weight: bold;
-	animation: neon 2s alternate infinite ease-in-out;
-
-}
-
-.cont-portfolio img{
-	width: 320px; 
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
-	animation: cont-opacity 1s linear normal;
-}
-
-.cont-portfolio h3{
-	font-size: 1.5em;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	animation: cont-opacity 1s linear normal;
-}
-
-.cont-portfolio h5{
-	font-size: 1em;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	animation: cont-opacity 1s linear normal;
-}
-
-#projetos{
-	margin: 0 auto;
-	display: flex;
-  flex-wrap: wrap;
-  width: auto;
-
-}
-
-.cont-portfolio{
-	width: 30%;
-	height: 320px;
- 	margin: 1.5%;
-	text-align: justify;
-}
-
-@keyframes cont-opacity {
-	from {
-		opacity: 0;
-	};
-
-	to{
-		opacity: 1;
-	};
-	
-}
-
-
 /*-----------------------------------------PROJETO---------------------------------------*/
+/*
 
-.projeto {
+*/
+#projeto {
 	width: 100%;
 	height: 100vh;
 	padding: 20px;
@@ -647,15 +663,9 @@ box-sizing: border-box; border:none; outline: none;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
-	background-color: #507192;
-	background-image: url(../img/logo-fundo.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 90%;
-	background-blend-mode: color-dodge;
 }
 
-.projeto h2{
+#projeto h2{
 	    text-align: left;
     text-transform: uppercase;
     color: #00ccff;
@@ -667,11 +677,12 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.projeto h3{
+#projeto h3{
 	font-size: 1.5em;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
 
 .cont-projeto{
 	width: 90%;
@@ -683,21 +694,16 @@ box-sizing: border-box; border:none; outline: none;
 }
 
 .projeto-img{
-	width: 55%;
+	width: 50%;
 	float: left;
 }
 
-
-#descricao-projeto{
-	float: right;
-	width: 40%;
+#dados-projeto{	
 	text-align: justify;
-}
-
-#dados-projeto{
 	float: right;
 	width: 40%;
 	padding: 10px 0 0 0 ;
+	color: white;
 }
 
 
@@ -705,25 +711,53 @@ box-sizing: border-box; border:none; outline: none;
 	font-weight: bold;
 }
 
-/*-----------------------------------------CONTATO-----------------------------------------*/
-.contato {
-	width: 100%;
+.modal-container{
+	width: 100vw;
 	height: 100vh;
-	padding: 20px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 70px;
-	background-color: #506171;
-	    background-image: url(../img/logo-fundo.png);
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: 90%;
-	    background-blend-mode: color-dodge;
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: none;
+	justify-content: center;
 }
 
-.contato h2{
-    text-align: left;
+.modal-container.exibir{
+	display: flex;
+}
+
+.modal{
+	width: 50%;
+	min-width: 300px;
+	padding: 20px;
+	margin-top: 70px;
+	position: relative;
+	background-color: rgb(21, 23, 47);
+	background-image: url(../img/logo-fundo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-blend-mode: color-dodge;
+}
+
+@keyframes modal{
+	from {
+		opacity: 0;
+		transform: translate3d(0, -60px, 0);
+	}
+	to{
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.exibir .modal{
+	animation: modal .3s;
+}
+
+.modal h2{
+	    text-align: left;
     text-transform: uppercase;
     color: #00ccff;
     --cor-neon: #00ccff;
@@ -734,38 +768,23 @@ box-sizing: border-box; border:none; outline: none;
 
 }
 
-.contato table{
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-
+.modal h3{
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-.contato table input, textarea {
-		border: 1px solid grey;
-}
-
-.contato table td{
-	font-weight: bold;
-}
-
-.contato table td #nome{
-	width: 30em;
-}
-
-.contato table td #email{
-	width: 30em;
-}
-
-.contato table td #mensagem{
-	resize: none;
-	width: 30em;
-	height: 20em;
-}
-
-.btn {
-	padding: 5px;
-	border-radius: 5px;
-	background-color: #2860ff;
+.fechar-modal{
 	color: white;
+	position: absolute;
+	top: 0px;;
+	right: 0px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: 4px solid white;
+	background: rgb(79, 87, 176);
+	cursor: pointer;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+	z-index: 100;
 }
