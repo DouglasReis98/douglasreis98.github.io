@@ -5,6 +5,7 @@ import Sobre from './components/layout/Sobre';
 import Habilidades from './components/layout/Habilidades';
 import Portfolio from './components/layout/Portfolio';
 import Contato from './components/layout/Contato';
+import Rodape from './components/layout/Rodape';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Habilidades />
         <Portfolio />
         <Contato />
+        <Rodape />
       </header>
     </div>
   );

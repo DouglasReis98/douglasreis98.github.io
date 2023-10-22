@@ -1,3 +1,11 @@
-h1{
-    color: red;
+.habilidades{
+    height: 100vh;
+}
+
+.habilidades h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Teko', 'sans-serif';
+    font-size: 5em;
+    text-align: center;
 }
