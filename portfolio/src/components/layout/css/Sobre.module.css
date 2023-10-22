@@ -1,0 +1,52 @@
+.sobre{
+    height: 100vh;
+}
+
+.sobre h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Teko', 'sans-serif';
+    font-size: 5em;
+    text-align: center;
+}
+
+.sobre article{
+    width: 80%;
+    height: max-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre .fotoReal{
+    background-image: url('./../../../img/douglas_face.png'), linear-gradient(to bottom, #101436 , #008DDC, #101436);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1em;
+    width: 25em;
+    height: 30em;
+}
+
+
+.sobre .textoNome{
+    width: 35em;
+    align-self: center;
+}
+
+.sobre .textoNome p {
+    color: #fff;
+    font-family: 'Teko', 'sans-serif';
+    font-size: 1.2em
+}
+
+.sobre .textoNome .qualificacao{
+    margin-top: 2em;
+}
+
+.sobre .textoNome .qualificacao h2{
+    font-family: 'Teko', 'sans-serif';
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
