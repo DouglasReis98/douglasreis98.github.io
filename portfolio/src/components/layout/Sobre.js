@@ -27,7 +27,7 @@ function Sobre() {
             <article>
                 <div className={styles.fotoReal} />
                 <div className={styles.textoNome}>
-                    <p> Meu nome é Douglas Reis, e tenho {idade()} anos de idade.<br />
+                    <p> Meu nome é Douglas Reis, tenho {idade()} anos e sou natural de Simões Filho - Bahia.<br />
                         Desde os meus 9 anos de idade, quando ganhei o meu primeiro computador, comecei a me aventurar pela informática.
                         Em 2014 tive o meu primeiro contato com a programação, e fiquei espantado e ao mesmo tempo fascinado em como os sites e sistemas em geral funcionavam. Fiz cursos de PHP, Lógica de Programação, Java, Delphi, Visual Basic e Microsoft Access. Depois comecei a me aprofundar no Desenvolvimento Web através de cursos online.
                         Em 2019, comecei a cursar Análise e Desenvolvimento de Sistemas pela UNOPAR, onde estudei por 3 anos.

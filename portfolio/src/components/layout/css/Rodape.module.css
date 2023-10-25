@@ -1,3 +1,8 @@
+.rodape{
+    height: 15em;
+    background-color: #000;
+}
+
 .rodape h1{
     color: red;
 }
