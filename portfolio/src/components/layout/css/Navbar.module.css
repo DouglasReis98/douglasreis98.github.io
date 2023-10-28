@@ -10,15 +10,17 @@ nav{
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     z-index: 1;
+    position: sticky;
+    top: 0;
 }
 
-img{
+nav img{
     width: 6em;
     margin: 0 3em;
     display: flex;
 }
 
-ul{
+nav ul{
     font-size: .8em;
     width: 45em;
     list-style: none;
@@ -28,7 +30,7 @@ ul{
 }
 
 
-ul li{
+nav ul li{
     position: relative;
     padding: 1em .8em;
     font-weight: bold;
@@ -36,7 +38,7 @@ ul li{
     transition: .5s ease-in-out;
 }
 
-ul li::before{
+nav ul li::before{
     content: " ";
     width: 0;
     height: 4px;
@@ -48,11 +50,11 @@ ul li::before{
 }
 
 
-li:hover::before{
+nav ul li:hover::before{
     width: 50%;
 }
 
-ul li::after{
+nav ul li::after{
     content: " ";
     width: 0;
     height: 4px;
@@ -63,11 +65,11 @@ ul li::after{
     transition: .5s ease-in-out;
 }
 
-ul li:hover::after{
+nav ul li:hover::after{
     width: 50%;
 }
 
-ul li:hover{
+nav ul li:hover{
     cursor: pointer;
     color: #fff;
 }
