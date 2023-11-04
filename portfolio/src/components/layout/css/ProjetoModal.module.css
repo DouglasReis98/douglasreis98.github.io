@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.507);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -13,7 +13,8 @@
 
 .modal .projetoContainer{
     width: 70%;
-    background: url('./../../../img/logo-fundo2.png') no-repeat center, #001049;
+    background: url('./../../../img/logo-fundo2.png') no-repeat center, #000411;
+    background-blend-mode: color-dodge, normal;
     font-family: 'Teko', 'sans-serif';
     color: #fff;
     position: relative;
@@ -37,6 +38,7 @@
     text-transform: uppercase;
     margin: 1em;
     font-size: 3.5em;
+    text-align: left;
 }
 
 .modal .projetoContainer .projeto{

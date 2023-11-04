@@ -1,6 +1,7 @@
 .main{
     background-color: #000;    
     position: relative;
+    min-height: calc(100vh - 3.5em);
 }
 
 video {
@@ -20,7 +21,7 @@ video {
     position: absolute;
     display: flex;
     justify-content: space-around;
-
+    overflow-y: hidden;
 }
 
 .texto{

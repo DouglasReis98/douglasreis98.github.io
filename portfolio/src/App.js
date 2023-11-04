@@ -7,7 +7,6 @@ import Habilidades from './components/layout/Habilidades';
 import Portfolio from './components/layout/Portfolio';
 import Contato from './components/layout/Contato';
 import Rodape from './components/layout/Rodape';
-import Projeto_Modal from './components/layout/ProjetoModal';
 
 function App() {
 
@@ -23,7 +22,6 @@ function App() {
         <Portfolio />
         <Contato />
         <Rodape />
-        <Projeto_Modal />
       </header>
     </div>
   );

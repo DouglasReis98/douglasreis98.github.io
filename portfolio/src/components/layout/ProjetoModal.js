@@ -1,13 +1,15 @@
 import styles from './css/ProjetoModal.module.css'
 import {FaRegTimesCircle} from 'react-icons/fa'
 import imagem from './../../img/proj-imagem.png'
-function ProjetoModal() {
+function ProjetoModal({modalOn, setModalOn}) {
+
+    if(modalOn === true){
 
     return (
-        <div className={styles.modal}>
+        <div className={styles.modal} >
 
             <div className={styles.projetoContainer}>
-                <span className={styles.fecharModal}>
+                <span className={styles.fecharModal} onClick={setModalOn}>
                     <FaRegTimesCircle />
                 </span>
                 <h1>Nome do Projeto</h1>
@@ -29,7 +31,8 @@ function ProjetoModal() {
 
         </div>
     )
-
+    }
+    return null
 
 }
 
