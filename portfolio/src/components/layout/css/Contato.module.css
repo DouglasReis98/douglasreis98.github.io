@@ -66,3 +66,45 @@
 .contato article div p{
     margin: 1em 0;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+    .contato h1{
+        background-color: red;
+    }
+
+    .contato article{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        font-family: 'Teko', 'sans-serif';
+    }
+
+    .contato article div{
+        font-size: 1.5em;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+    }
+
+    .contato article{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Teko', 'sans-serif';
+}
+
+    .contato article form{
+        width: 90%;
+    }
+
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){}
+
+/* Mobile */
+@media (max-width: 480px){}

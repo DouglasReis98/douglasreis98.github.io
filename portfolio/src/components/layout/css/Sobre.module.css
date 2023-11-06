@@ -11,7 +11,7 @@
 }
 
 .sobre article{
-    width: 80%;
+    width: 82%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -125,3 +125,69 @@
 	font-style: italic;
 	padding: 3px;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){
+	
+	.sobre .fotoReal{
+		width: 20em;
+		height: 25em;
+		margin: 0 2em;
+	}
+
+	.sobre .textoNome{
+		width: 50%;
+		align-self: center;
+	}
+
+}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+	.sobre h1{
+		font-size: 3em;
+	}
+
+	.sobre article{
+		width: 95%
+	}
+
+	.sobre .fotoReal{
+		width: 15em;
+		height: 20em;
+		margin: 0 1em;
+	}
+
+	.sobre .textoNome{
+		width: 60%;
+		align-self: center;
+	}
+	
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){
+
+	.sobre .textoNome{
+		width: 100%;
+		align-self: center;
+	}
+
+	.sobre .fotoReal{
+		margin: 1em;
+	}
+
+
+	.sobre article{
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+}
+
+/* Mobile */
+@media (max-width: 480px){}

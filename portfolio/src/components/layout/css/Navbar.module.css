@@ -80,8 +80,6 @@ nav ul li:hover{
     color: #fff;
 }
 
-
-
 /* Tablets Grandes e Laptops */
 @media (max-width: 1199px){
     
@@ -92,9 +90,6 @@ nav ul li:hover{
 
 /* Dispositivos Pequenos */
 @media (max-width: 767px){
-    nav{
-
-}
 
 #btn-mobile{
     display: flex;
@@ -127,4 +122,8 @@ nav ul{
 }
 
 /* Mobile */
-@media (max-width: 480px){}
+@media (max-width: 480px){
+    nav{
+        min-width: 100%;
+    }
+}

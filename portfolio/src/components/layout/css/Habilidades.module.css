@@ -46,3 +46,36 @@
     color: #fff;
     border: 2px solid #fff;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+    .habilidades h1{
+        font-size: 3em;
+    }
+
+    .habilidades article{
+        display: grid;
+        justify-content: space-between;
+    }
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){
+
+    .habilidades article{
+        width: 100%;
+        display: grid;
+        justify-content: space-around;
+        gap: 1em;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px){
+
+}

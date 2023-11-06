@@ -6,7 +6,7 @@ footer{
 
 footer section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 footer section div {
@@ -80,3 +80,36 @@ footer section p{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+    footer section{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    footer section div{
+        margin: 1em;
+    }
+
+    footer section h3{
+        margin: 1em;
+    }
+
+    .copyright{
+        margin: 1em;
+    }
+
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){}
+
+/* Mobile */
+@media (max-width: 480px){}

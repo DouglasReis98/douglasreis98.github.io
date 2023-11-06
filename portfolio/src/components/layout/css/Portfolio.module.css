@@ -64,3 +64,45 @@
     backdrop-filter: blur(3px) brightness(50%);
     opacity: 1;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){
+
+    .portfolio article{
+        grid-template-columns: repeat(3, 38%);
+    }
+    
+}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+    .portfolio h1{
+        font-size: 3em;
+    }
+
+    .portfolio article{
+        width: 100%;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){
+
+    .portfolio article{
+        width: 100%;
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+    }
+
+    .portfolio article .projeto img{
+        width: 20em;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 480px){}
