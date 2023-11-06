@@ -116,7 +116,25 @@ nav ul li:hover{
 }
 
 nav ul{
-    display: none;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 4.5em);
+    position: absolute;
+    background-color: #00245a8a;
+    top: 4.4em;
+}
+
+nav ul li{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+nav ul li:hover::before{
+    width: 0;
+}
+
+nav ul li:hover::after{
+    width: 0;
 }
 
 }
