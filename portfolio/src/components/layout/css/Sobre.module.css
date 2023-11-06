@@ -48,6 +48,8 @@
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+	font-size: 1.7em;
+	margin: .5em;
 }
 
 /*Mini-Slide*/
@@ -106,22 +108,14 @@
 	filter: drop-shadow(0 0 1px white);
 }
 
-#qualif h3{
-	font-size: 1.2em;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-	display: block;
-	padding: 1rem;
-}
-
-#qualif h4 {
-	font-size: 1em;
+.item_qualif h3 {
+	font-size: 1.4em;
 	font-weight: bold;
 	padding: 1.5px;
 }
 
-#qualif h5 {
+.item_qualif h4 {
+	font-size: 1.2em;
 	font-style: italic;
 	padding: 3px;
 }

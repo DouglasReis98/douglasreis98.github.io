@@ -142,6 +142,7 @@ video {
         background-image: url('./../../../img/fundo-code.jpg');
         background-position: center center;
         background-repeat: no-repeat;
+        height: auto;
     }
 
     video {

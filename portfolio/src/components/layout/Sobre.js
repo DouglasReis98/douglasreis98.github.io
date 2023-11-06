@@ -82,34 +82,34 @@ arrows.forEach(arrow => {
                         Me formei em 2022 e atualmente sigo estudando e buscando cada vez mais conhecimento para subir mais e mais degraus na minha carreira.
                     </p>
                     <div className={styles.qualificacao}>
-                        <h2>Qualificação</h2>
+                        <h2>Qualificações</h2>
                         <i className={styles.previous}><FaLessThan/></i>
                         <i className={styles.next}><FaGreaterThan/></i>
                         <div id={styles["wrapper-qualif"]}>
                             <div className={styles.box_qualif}>
                                 <div className={styles.item_qualif}>
                                     <img alt src={prepara}/>
-                                        <h4>Prepara Cursos</h4>
-                                        <h5>Design Gráfico, Web Design, Programação</h5>
-                                        <h5>2013 - 2014</h5>
+                                        <h3>Prepara Cursos</h3>
+                                        <h4>Design Gráfico, Web Design, Programação</h4>
+                                        <h4>2013 - 2014</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
                                     <img alt src={unopar}/>
-                                        <h4>UNOPAR</h4>
-                                        <h5>Técnólogo em Análise e Desenvolvimento de Sistemas</h5>
-                                        <h5>2019 - 2022</h5>
+                                        <h3>UNOPAR</h3>
+                                        <h4>Técnólogo em Análise e Desenvolvimento de Sistemas</h4>
+                                        <h4>2019 - 2022</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
                                     <img alt src={timtec}/>
-                                        <h4>TIM Tec</h4>
-                                        <h5>UI e UX</h5>
-                                        <h5>2020</h5>
+                                        <h3>TIM Tec</h3>
+                                        <h4>UI e UX</h4>
+                                        <h4>2020</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
                                     <img alt src={udemy}/>
-                                        <h4>Udemy</h4>
-                                        <h5>Desenvolvimento Web Completo 2022</h5>
-                                        <h5>Cursando</h5>
+                                        <h3>Udemy</h3>
+                                        <h4>Desenvolvimento Web Completo 2022</h4>
+                                        <h4>Cursando</h4>
                                 </div>
                             </div>
                         </div>

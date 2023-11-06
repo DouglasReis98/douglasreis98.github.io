@@ -18,6 +18,7 @@
     font-family: 'Teko', 'sans-serif';
     color: #fff;
     position: relative;
+    text-align: justify;
 }
 
 .modal .projetoContainer .fecharModal{
@@ -31,6 +32,10 @@
 
 .modal .projetoContainer .fecharModal:hover{
     color: #fff;
+}
+
+.modal .projetoContainer .fecharModal:active{
+    color: #797979;
 }
 
 .modal .projetoContainer h1{
@@ -48,6 +53,7 @@
 
 .modal img{
     width: 30em;
+    height: fit-content;
 }
 
 .modal .projetoContainer .projetoInfos{
@@ -57,3 +63,59 @@
     justify-content: space-around;
     flex-direction: column;
 }
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){
+
+    .modal .projetoContainer{
+        width: 80%;
+    }
+}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){
+
+    .modal img{
+        width: 25em;
+    }
+
+    .modal .projetoContainer .projetoInfos{
+        font-size: 1.2em;
+
+    }
+
+}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){
+    
+    .modal .projetoContainer h1{
+        margin: .5em;
+        text-align: center;
+    }
+
+    
+    .modal .projetoContainer .fecharModal{
+        font-size: 2em;
+    }
+
+    .modal img{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .modal .projetoContainer .projeto{
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .modal .projetoContainer .projetoInfos{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 480px){}

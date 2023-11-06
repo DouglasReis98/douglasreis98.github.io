@@ -23,6 +23,7 @@
 .portfolio article .projeto{
     position: relative;
     cursor: pointer;
+    justify-self: center;
 }
 
 .portfolio article .projeto img{
