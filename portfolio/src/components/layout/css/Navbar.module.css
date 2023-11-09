@@ -113,15 +113,38 @@ nav ul li:hover{
     margin-top: 5px;
     background-color: currentColor;
     position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.fechar #btn-hamburger{
+    border-top: transparent;
+
+}
+
+.fechar #btn-hamburger::before{
+    transform: rotate(135deg);
+}
+
+.fechar #btn-hamburger::after{
+    transform: rotate(-135deg);
+    top: -7px;
 }
 
 nav ul{
     display: block;
     width: 100%;
-    height: calc(100vh - 4.5em);
+    height: 0;
     position: absolute;
     background-color: #00245a8a;
     top: 4.4em;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+nav .itemsOpen{
+    height: calc(100vh - 4.5em);
+    visibility: visible;
 }
 
 nav ul li{

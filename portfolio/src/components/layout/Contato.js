@@ -6,13 +6,13 @@ function Contato() {
             <h1>Contato</h1>
             <article>
                 <form action="#" method="post">
-                    <label for="nome">Nome</label>
+                    <label htmlFor="nome">Nome</label>
                     <input type="text" name="nome" />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" name="email" />
-                    <label for="assunto">Assunto</label>
+                    <label htmlFor="assunto">Assunto</label>
                     <input type="text" name="assunto" />
-                    <label for="mensagem">Mensagem:</label>
+                    <label htmlFor="mensagem">Mensagem:</label>
                     <textarea name="mensagem" />
                     <input type="submit" id={styles.enviar} value="Enviar" />
                 </form>

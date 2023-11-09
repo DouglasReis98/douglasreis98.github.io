@@ -88,25 +88,25 @@ arrows.forEach(arrow => {
                         <div id={styles["wrapper-qualif"]}>
                             <div className={styles.box_qualif}>
                                 <div className={styles.item_qualif}>
-                                    <img alt src={prepara}/>
+                                    <img alt="" src={prepara}/>
                                         <h3>Prepara Cursos</h3>
                                         <h4>Design Gráfico, Web Design, Programação</h4>
                                         <h4>2013 - 2014</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
-                                    <img alt src={unopar}/>
+                                    <img alt="" src={unopar}/>
                                         <h3>UNOPAR</h3>
                                         <h4>Técnólogo em Análise e Desenvolvimento de Sistemas</h4>
                                         <h4>2019 - 2022</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
-                                    <img alt src={timtec}/>
+                                    <img alt="" src={timtec}/>
                                         <h3>TIM Tec</h3>
                                         <h4>UI e UX</h4>
                                         <h4>2020</h4>
                                 </div>
                                 <div className={styles.item_qualif}>
-                                    <img alt src={udemy}/>
+                                    <img alt="" src={udemy}/>
                                         <h3>Udemy</h3>
                                         <h4>Desenvolvimento Web Completo 2022</h4>
                                         <h4>Cursando</h4>
