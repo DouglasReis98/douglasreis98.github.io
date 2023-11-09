@@ -1,11 +1,11 @@
-import {FaLessThan, FaGreaterThan} from 'react-icons/fa'
+import { FaLessThan, FaGreaterThan } from 'react-icons/fa'
 import styles from './css/Sobre.module.css'
 import prepara from './../../img/qualificacoes/logo_prepara.png'
 import unopar from './../../img/qualificacoes/logo_unopar.png'
 import timtec from './../../img/qualificacoes/logo_timtec.png'
 import udemy from './../../img/qualificacoes/udemy-logo.png'
-//current_item
 
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 function Sobre() {
 
@@ -28,45 +28,13 @@ function Sobre() {
         return idadeResult < 0 ? 0 : idadeResult;
     }
 
-    /*
-    
-    const arrows = document.querySelectorAll('.arrow');
-    const itens = document.querySelectorAll('.item-qualif');
-    const numItens = itens.length;
-    let currentItem = 0;
+    const qualificacoes = [
+        { id: '1', logo: `${prepara}`, nome: 'Prepara Cursos', curso: 'Design Gráfico, Web Design, Programação', periodo: '2013 - 2014' },
+        { id: '2', logo: `${unopar}`, nome: 'UNOPAR', curso: 'Técnólogo em Análise e Desenvolvimento de Sistemas', periodo: '2019 - 2022' },
+        { id: '3', logo: `${timtec}`, nome: 'TIM Tec', curso: 'UI e UX', periodo: '2020' },
+        { id: '4', logo: `${udemy}`, nome: 'Udemy', curso: 'Desenvolvimento Web Completo 2022', periodo: 'Cursando' },
+    ]
 
-arrows.forEach(arrow => {
-    arrow.addEventListener('click', () => {
-        const isEsq = arrow.classList.contains("previous");
-
-        if (isEsq) {
-            currentItem -= 1;
-        } else {
-            currentItem += 1;
-        }
-
-        if (currentItem >= numItens) {
-            currentItem = 0;
-        }
-
-        if (currentItem < 0) {
-            currentItem = numItens - 1;
-        }
-
-        itens.forEach(item => item.classList.remove('current-item'));
-
-        itens[currentItem].scrollIntoView({
-            inline: "center",
-            behavior: 'smooth',
-            block: 'nearest'
-        })
-        console.log('arrow clicked', currentItem);
-
-    })
-})
-
-    
-    */
 
     return (
         <section className={styles.sobre}>
@@ -83,7 +51,36 @@ arrows.forEach(arrow => {
                     </p>
                     <div className={styles.qualificacao}>
                         <h2>Qualificações</h2>
-                        <i className={styles.previous}><FaLessThan/></i>
+                        <Swiper                        
+                        slidesPerView={1}
+                        navigation
+                        >
+                            {qualificacoes.map((item) => { return (
+                                <SwiperSlide key={item.id}>
+                                    <div className={styles.item_qualif}>
+                                        <img alt="" src={item.logo} />
+                                        <h3>{item.nome}</h3>
+                                        <h4>{item.curso}</h4>
+                                        <h4>{item.periodo}</h4>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                            })}
+                        </Swiper>
+                        <section id="clearfix"></section>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    )
+}
+
+export default Sobre
+
+/*
+
+<i className={styles.previous}><FaLessThan/></i>
                         <i className={styles.next}><FaGreaterThan/></i>
                         <div id={styles["wrapper-qualif"]}>
                             <div className={styles.box_qualif}>
@@ -113,13 +110,5 @@ arrows.forEach(arrow => {
                                 </div>
                             </div>
                         </div>
-                        <section id="clearfix"></section>
-                    </div>
-                </div>
-            </article>
-        </section>
 
-    )
-}
-
-export default Sobre
+*/

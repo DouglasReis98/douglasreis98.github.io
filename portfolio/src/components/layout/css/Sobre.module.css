@@ -96,8 +96,10 @@
 }
 
 .item_qualif{
- 	min-width: 26em;
+ 	min-width: 20em;
 	margin: 0 0 0 2em;
+	color: #fff;
+	font-family: 'Teko';
 }
 
 .item_qualif img{
