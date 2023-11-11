@@ -12,11 +12,11 @@ video {
 }
 
 .apresentacao{
-    width: 80%;
+    width: 85%;
     height: 100%;
     color: #fff;
     top: 0;
-    left: 9%;
+    left: 8%;
     margin: 0 auto;
     position: absolute;
     display: flex;
@@ -43,7 +43,26 @@ video {
 
 .texto h3{
     text-transform: uppercase;
-    font-size: 6em;
+    font-size: 5.5em;
+}
+
+.texto h3::after{
+    content: '|';
+    color: #0038FF;
+    margin-left: 2px;
+    animation: blinker .7s infinite;
+}
+
+@keyframes blinker {
+
+    0%, 100%{
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    
 }
 
 .texto h4{
@@ -89,7 +108,8 @@ video {
 }
 
 .texto h3{
-    font-size: 5em;
+    font-size: 4em;
+    display: block;
 }
 
 .texto h4{
@@ -120,7 +140,7 @@ video {
     }
     
     .texto h3{
-        font-size: 3.5em;
+        font-size: 3em;
     }
     
     .texto h4{

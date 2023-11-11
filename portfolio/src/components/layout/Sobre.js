@@ -1,4 +1,3 @@
-import { FaLessThan, FaGreaterThan } from 'react-icons/fa'
 import styles from './css/Sobre.module.css'
 import prepara from './../../img/qualificacoes/logo_prepara.png'
 import unopar from './../../img/qualificacoes/logo_unopar.png'
@@ -30,7 +29,7 @@ function Sobre() {
 
     const qualificacoes = [
         { id: '1', logo: `${prepara}`, nome: 'Prepara Cursos', curso: 'Design Gráfico, Web Design, Programação', periodo: '2013 - 2014' },
-        { id: '2', logo: `${unopar}`, nome: 'UNOPAR', curso: 'Técnólogo em Análise e Desenvolvimento de Sistemas', periodo: '2019 - 2022' },
+        { id: '2', logo: `${unopar}`, nome: 'UNOPAR', curso: 'Análise e Desenvolvimento de Sistemas', periodo: '2019 - 2022' },
         { id: '3', logo: `${timtec}`, nome: 'TIM Tec', curso: 'UI e UX', periodo: '2020' },
         { id: '4', logo: `${udemy}`, nome: 'Udemy', curso: 'Desenvolvimento Web Completo 2022', periodo: 'Cursando' },
     ]
