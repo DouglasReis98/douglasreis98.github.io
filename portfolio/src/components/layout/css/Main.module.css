@@ -46,25 +46,6 @@ video {
     font-size: 5.5em;
 }
 
-.texto h3::after{
-    content: '|';
-    color: #0038FF;
-    margin-left: 2px;
-    animation: blinker .7s infinite;
-}
-
-@keyframes blinker {
-
-    0%, 100%{
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-    
-}
-
 .texto h4{
     font-size: 2em;
 }
