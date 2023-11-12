@@ -12,7 +12,7 @@ function Navbar() {
            <a href='#'><img src={logo} alt='home-page'/></a>
            <button id={styles['btn-mobile']} className={styles[`${isOpen ? 'fechar' : ''}`]} onClick={menuToggle}><span id={styles['btn-hamburger']}></span></button>
            <ul className={styles[`${isOpen ? 'itemsOpen' : ''}`]}>
-           <a><li>Sobre Mim</li></a>
+           <a href=''><li>Sobre Mim</li></a>
            <a><li>Habilidades</li></a>
            <a><li>Portfólio</li></a>
            <a><li>Blog</li></a>

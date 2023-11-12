@@ -41,6 +41,7 @@
     font-size: .3em;
     text-transform: uppercase;
     font-family: "Teko", "sans-serif";
+    cursor: default;
 }
 
 .habilidades article div:hover{
