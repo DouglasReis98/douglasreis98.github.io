@@ -3,7 +3,7 @@ import { FaBootstrap, FaCss3, FaCss3Alt, FaFigma, FaHtml5, FaJs, FaPhp } from 'r
 
 function Habilidades() {
     return (
-        <section className={styles.habilidades}>
+        <section id="habilidades" className={styles.habilidades}>
             <h1>Habilidades</h1>
             <article>
                 <div>

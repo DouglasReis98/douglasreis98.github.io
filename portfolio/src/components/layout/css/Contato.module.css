@@ -72,6 +72,10 @@
 
 /* Tablets Pequenos */
 @media (max-width: 991px){
+    
+    .contato h1{
+        font-size: 3em;
+    }
 
     .contato article{
         display: flex;

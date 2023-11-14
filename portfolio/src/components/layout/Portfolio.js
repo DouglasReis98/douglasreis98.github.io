@@ -6,7 +6,7 @@ function Portfolio() {
 const [modalOn, setModalOn] = useState(false)
 
     return (
-        <section className={styles.portfolio}>
+        <section id="portfolio" className={styles.portfolio}>
             <h1>Portfólio</h1>
             <article>
             <div className={styles.projeto} onClick={() => setModalOn(true)}>

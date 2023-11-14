@@ -36,7 +36,7 @@ function Sobre() {
 
 
     return (
-        <section className={styles.sobre}>
+        <section id="sobre" className={styles.sobre}>
             <h1>Sobre</h1>
             <article>
                 <div className={styles.fotoReal} />

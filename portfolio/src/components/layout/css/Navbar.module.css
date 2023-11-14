@@ -55,7 +55,6 @@ nav ul li::before{
     transition: .5s ease-in-out;
 }
 
-
 nav ul li:hover::before{
     width: 50%;
 }

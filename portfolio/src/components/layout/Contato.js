@@ -2,7 +2,7 @@ import styles from './css/Contato.module.css'
 
 function Contato() {
     return (
-        <section className={styles.contato}>
+        <section id="contato" className={styles.contato}>
             <h1>Contato</h1>
             <article>
                 <form action="#" method="post">
