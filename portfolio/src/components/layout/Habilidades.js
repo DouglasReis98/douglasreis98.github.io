@@ -1,5 +1,5 @@
 import styles from './css/Habilidades.module.css'
-import { FaBootstrap, FaCss3, FaCss3Alt, FaFigma, FaHtml5, FaJs, FaPhp } from 'react-icons/fa'
+import { FaBootstrap, FaCss3Alt, FaFigma, FaHtml5, FaJs, FaPhp } from 'react-icons/fa'
 
 function Habilidades() {
     return (

@@ -20,11 +20,11 @@ function Rodape() {
                     </ul>
                 </div>
                 <div>
-                    <img src={logo} />
+                    <img src={logo} alt='' />
                     <div className={styles.socialMedia}>
-                        <a href='#'><FaInstagram /></a>
-                        <a href='#'><FaLinkedin /></a>
-                        <a href='#'><FaGithub /></a>
+                        <a href='http://instagram.com/douglasreis_ads'><FaInstagram /></a>
+                        <a href='https://www.linkedin.com/pub/douglas-reis/'><FaLinkedin /></a>
+                        <a href='https://github.com/DouglasReis98'><FaGithub /></a>
                     </div>
                 </div>
                 <div>

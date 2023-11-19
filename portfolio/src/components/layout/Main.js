@@ -1,7 +1,7 @@
 import styles from './css/Main.module.css'
 import video from './../../videos/video-fundo.mp4'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-import imagem from './../../img/douglas_avatar3.png'
+//import imagem from './../../img/douglas_avatar3.png'
 function Main() {
 
     const arrOcups = ["Analista de Sistemas", "Desenvolvedor Full - Stack", "Programador"]
