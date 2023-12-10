@@ -1,35 +1,24 @@
+import { useState } from 'react'
 import styles from './css/Habilidades.module.css'
 import { FaBootstrap, FaCss3Alt, FaFigma, FaHtml5, FaJs, FaPhp } from 'react-icons/fa'
 
 function Habilidades() {
+
+    const [habilidades] = useState([
+        {nome: "HTML5", icone: <FaHtml5 />},
+        {nome: "CSS3", icone: <FaCss3Alt />},
+        {nome: "JavaScript", icone: <FaJs />},
+        {nome: "PHP", icone: <FaPhp />},
+        {nome: "Figma", icone: <FaFigma />},
+        {nome: "Bootstrap", icone: <FaBootstrap />}
+    ])
     return (
         <section id="habilidades" className={styles.habilidades}>
             <h1>Habilidades</h1>
-            <article>
-                <div>
-                    <FaHtml5 />
-                    <h3>HTML5</h3>
-                </div>
-                <div>
-                    <FaCss3Alt />
-                    <h3>CSS3</h3>
-                </div>
-                <div>
-                    <FaJs />
-                    <h3>JavaScript</h3>
-                </div>
-                <div>
-                    <FaPhp />
-                    <h3>PHP</h3>
-                </div>
-                <div>
-                    <FaFigma />
-                    <h3>Figma</h3>
-                </div>
-                <div>
-                    <FaBootstrap />
-                    <h3>Bootstrap</h3>
-                </div>
+            <article>            
+                    {habilidades.map((hab, i) => { 
+                    return <div key={i}>{hab.icone}<h3>{hab.nome}</h3></div>})
+                    }          
             </article>
         </section>
     )

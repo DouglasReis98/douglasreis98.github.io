@@ -18,7 +18,7 @@ function Navbar() {
                 <li><Link smooth={true} offset={-56} to='sobre'>Sobre Mim</Link></li>
                 <li><Link smooth={true} offset={-56} to='habilidades'>Habilidades</Link></li>
                 <li><Link smooth={true} offset={-56} to='portfolio'>Portfólio</Link></li>
-                <li><Link onClick={alertaBlog}>Blog</Link></li>
+                <li onClick={alertaBlog}>Blog</li>
                 <li><Link smooth={true} offset={-56} to='contato'>Contato</Link></li>
             </ul>
         </nav>
