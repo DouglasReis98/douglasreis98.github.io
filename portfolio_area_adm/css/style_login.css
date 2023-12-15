@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:visited{
+    color: currentColor;
+}
+
+a:hover{
+    color: rgb(0, 119, 255);
+}
+
+body{
+    background-image: url("../img/logo-fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    color: #fff;
+    background-color: rgba(0, 43, 99, .4);
+    backdrop-filter: blur(10px);
+    box-shadow:-1px 1px 10px 15px rgb(0, 110, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1em;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside{
+    width: 60%;
+}
+
+#banner{
+    width: fit-content;
+}
+
+#banner div {
+    max-width: 50%;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+#banner div img{
+    width: 80%;
+}
+
+#banner div h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #0047FF;
+    font-size: 2em;
+    font-family: Righteous;
+
+}
+
+#login{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    padding: .5em;
+    color: #000;
+}
+
+#login form{
+    width: 100%;
+}
+
+#login form label, button{
+    font-family: Teko;
+    font-size: 1.5em;
+}
+
+#login form input{
+    width: 100%;
+    font-size: 1em;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 2px solid #575757;
+    outline: 0;
+}
+
+#login form button{
+    width: 80%;
+    height: 40px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(107, 225, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login form button:hover{
+    background-color: #00327e;
+    color: #fff;
+}
+
+#login form button:active{
+    background-color: #001d49;
+    color: #fff;
+}
+
+.erro{
+    background-color: #ff0000;
+    border: 3px solid rgb(75, 1, 1);
+    margin-top: 1em;
+    padding: .5em;
+    text-align: center;
+    color: #fff;
+}
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){}
+
+/* Mobile */
+@media (max-width: 480px){}
