@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     padding: 0;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto;
+    box-sizing: border-box;
 }
 
 a{
@@ -18,99 +23,131 @@ a:hover{
 }
 
 body{
-    background-image: url("../../img/logo-fundo.png");
+    background-image: url("../img/logo-fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(0, 81, 148);
+    background-color: rgb(0, 0, 0);
     background-attachment: fixed;
     background-position: center;
-    background-blend-mode:overlay;
-    background-size: 60%;
+    background-size: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-
-#banner{
-    width: 30%;
-    margin: 0 auto;
-
-}
-
-#banner img{
-    width: 100%;
-}
-
-h1{
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 1px 1px rgb(255, 255, 255);
-    color: rgb(0, 12, 116);
-    font-size: 2.5rem;
-}
-
-#formulario{
+main{
     color: #fff;
-    margin: 30px auto;
-    background-color: rgb(0, 63, 99);
-    width: 20%;
-    padding: 20px;
+    background-color: rgba(0, 43, 99, .4);
+    backdrop-filter: blur(10px);
+    box-shadow:-1px 1px 10px 15px rgb(0, 110, 255);
     border-radius: 10px;
     text-align: center;
+    padding: 1em;
 }
 
-#formulario input{
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside{
+    width: 60%;
+}
+
+#banner{
+    width: fit-content;
+}
+
+#banner div {
+    max-width: 50%;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+#banner div img{
+    width: 80%;
+}
+
+#banner div h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #0047FF;
+    font-size: 2em;
+    font-family: Righteous;
+
+}
+
+#login{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    padding: .5em;
+    color: #000;
+}
+
+#login form{
     width: 100%;
 }
 
-#formulario button{
+#login form label, button{
+    font-family: Teko;
+    font-size: 1.5em;
+}
+
+#login form input{
+    width: 100%;
+    font-size: 1em;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 2px solid #575757;
+    outline: 0;
+}
+
+#login form button{
     width: 80%;
     height: 40px;
     margin: 10px auto;
-    border-radius: 10px;
-    background-color: rgb(107, 225, 255);
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-table, th, tr, td{
-    border: 1px solid white;
-    border-collapse: collapse;
-}
-
-#lista-posts{
-    width: 95%;
-    margin: 10px auto;
-    color: #fff;  
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#criar-projeto{
-    width: 30%;
-    margin: 20px auto;
-    background-color: rgb(0, 110, 255);
-    padding: 20px;
-    border-radius: 10px;
-
-}
-
-#criar-projeto input:not(#data){
-    width: 100%;
-}
-
-#criar-projeto textarea{
-    width: 100%;
-    height: 200px;
-}
-
-#concluir{
-    margin: 20px auto;   
-    width: 100%;
-    height: 60px;
+    border: none;
     border-radius: 20px;
+    background-color: rgb(107, 225, 255);
     text-transform: uppercase;
-    background-color: rgb(23, 38, 124);
-    color: white;
     font-weight: bold;
-
+    cursor: pointer;
 }
 
+#login form button:hover{
+    background-color: #00327e;
+    color: #fff;
+}
+
+#login form button:active{
+    background-color: #001d49;
+    color: #fff;
+}
+
+.erro{
+    background-color: #ff0000;
+    border: 3px solid rgb(75, 1, 1);
+    margin-top: 1em;
+    padding: .5em;
+    text-align: center;
+    color: #fff;
+}
+
+/* Tablets Grandes e Laptops */
+@media (max-width: 1199px){}
+
+/* Tablets Pequenos */
+@media (max-width: 991px){}
+
+/* Dispositivos Pequenos */
+@media (max-width: 767px){}
+
+/* Mobile */
+@media (max-width: 480px){}
