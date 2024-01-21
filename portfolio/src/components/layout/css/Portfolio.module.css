@@ -13,25 +13,34 @@
 
 .portfolio article{
     width: 80%;
-    display: grid;
     margin: 0 auto;
+}
+
+.portfolioContainer{
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 5em 1em;
 }
 
-.portfolio article .projeto{
+.portfolioContainer .projeto{
     position: relative;
     cursor: pointer;
     justify-self: center;
+    transition: all ease-in-out .5s;
+
 }
 
-.portfolio article .projeto img{
+.portfolioContainer .projeto img{
     width: 20em;
     height: auto;
     margin: 0;
     border: 2px solid #0066ff00;
     transition: all .5s;
+}
+
+.portfolioContainer h3{
+    color: #fff;
 }
 
 /*
@@ -40,7 +49,7 @@
 }
 */
 
-.portfolio article .projeto .nomeProjeto{
+.portfolioContainer .projeto .nomeProjeto{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -54,35 +63,103 @@
     transition: all .5s;
 }
 
-.portfolio article .projeto .nomeProjeto h3{
+.portfolioContainer .projeto .nomeProjeto h3{
     color: #fff;
     text-transform: uppercase;
     font-family: 'Teko', 'sans-serif';
 }
 
-.portfolio article .projeto .nomeProjeto:hover{
+.portfolioContainer .projeto .nomeProjeto:hover{
     border: 2px solid #0066ff;
     backdrop-filter: blur(3px) brightness(50%);
     opacity: 1;
+}
+/*
+.navigation{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    display: block;
+}
+
+.navigation button{
+    
+    background-color: #0066ff;
+}
+*/
+
+.pagNav{
+    border: 0;
+    background: none;
+    font-size: 4em;
+    display: inline-block;
+    line-height: 50%;
+    position: absolute;
+    border-radius: 100%;
+    padding: .1em;
+}
+
+.pagNav:hover{
+    color: #3c89fd;
+}
+
+.pagNav:nth-of-type(1){
+    top: 50%;
+    left: 1%;
+}
+
+.pagNav:nth-of-type(2){
+    top: 50%;
+    right: 1%;
+}
+
+.active{
+    color: #0066ff;
+    cursor: pointer;
+}
+
+.inactive, .inactive:hover{
+    color: #002966;
 }
 
 /* Tablets Grandes e Laptops */
 @media (max-width: 1199px){
 
     .portfolio article{
-        grid-template-columns: repeat(3, 38%);
+        width: 100%;
+        height: 100%;
     }
+
+    .portfolioContainer{
+        grid-template-columns: repeat(3, 25%);
+        gap: 3em .1em;
+        justify-content: center;
+    }
+
+    .portfolioContainer .projeto img{
+        width: 15em;
+    }
+
+    .portfolioContainer .projeto .nomeProjeto h3{
+        font-size: .8em;
+    }
+
     
 }
 
 /* Tablets Pequenos */
 @media (max-width: 991px){
 
+    .portfolio{
+		padding: 1em 0;
+	}
+
     .portfolio h1{
         font-size: 3em;
     }
 
-    .portfolio article{
+    .portfolioContainer{
         width: 100%;
         grid-template-columns: repeat(2, auto);
         justify-content: space-around;
@@ -93,7 +170,7 @@
 /* Dispositivos Pequenos */
 @media (max-width: 767px){
 
-    .portfolio article{
+    .portfolioContainer{
         width: 100%;
         grid-template-columns: repeat(1, auto);
         justify-content: center;

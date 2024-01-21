@@ -73,6 +73,9 @@
 /* Tablets Pequenos */
 @media (max-width: 991px){
     
+    .contato{
+		padding: 1em 0;
+	}
     .contato h1{
         font-size: 3em;
     }

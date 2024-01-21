@@ -1,5 +1,6 @@
 .sobre{
     min-height: 100vh;
+	
 }
 
 .sobre h1{
@@ -123,6 +124,9 @@
 
 /* Dispositivos Pequenos */
 @media (max-width: 767px){
+	.sobre{
+		padding: 1em 0;
+	}
 
 	.sobre .textoNome{
 		width: 100%;

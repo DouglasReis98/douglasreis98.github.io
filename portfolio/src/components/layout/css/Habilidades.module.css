@@ -68,6 +68,10 @@
 /* Dispositivos Pequenos */
 @media (max-width: 767px){
 
+    .habilidades{
+		padding: 1em 0;
+	}
+
     .habilidades article{
         width: 100%;
         display: grid;
