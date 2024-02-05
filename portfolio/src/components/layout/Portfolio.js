@@ -45,10 +45,9 @@ function Portfolio() {
     const ultimoPostId = pagAtual * postsPorPag;
     const primeiroPostId = ultimoPostId - postsPorPag;
 
-    const projetosAtuais = projetos.sort((a,b) => {return b - a}).slice(primeiroPostId, ultimoPostId)
+    const projetosAtuais = projetos.sort((a,b) => {return b.id - a.id}).slice(primeiroPostId, ultimoPostId)
 
     console.log(pagAtual)
-    console.log(projetos.sort((a,b) => {return b - a}))
     return (
         <section id="portfolio" className={styles.portfolio}>
             <h1>Portfólio</h1>
