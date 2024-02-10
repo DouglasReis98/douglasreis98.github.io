@@ -6,11 +6,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/{{ style }}" />
+    <link rel="stylesheet" type="text/css" href="css/{{ style2 }}" />
 </head>
 
 <body>
+
+    {{#if auth}}
+    <header>
+        <div>
+            <img src="../img/logo.png" alt="">
+            <h1>Área Administrativa</h1>
+        </div>
+
+        <div>
+            <a href=""><h1 class="toBlog">Blog &rarr;</h1></a>
+        </div>
+    </header>
+
+    <button id="btnNav" class=""><span class="btn-hamburger"></span></button>
+    <nav>
+        <h3>Menu</h3>
+        <hr><br>
+        <h3><a href="/">&larr; Home</a></h3>
+        <ul>
+            <a href="cadastrar-projeto"><li>Criar Projeto</li></a>
+            <li><a href="gerenciar-projetos">Gerenciar Projetos</a></li>
+            <li><a href="gerenciar-categorias">Gerenciar Categorias</a></li>
+            <li><a href="gerenciar-dados">Gerenciar Dados ADM</a></li>
+            <li>Sair</li>
+        </ul>
+        <!--
+            Criar Projeto
+Gerenciar Projetos
+Categorias
+Gerenciar Categorias
+Dados ADM
+Editar Dados
+        -->
+    </nav>
+{{/if}}
+    
         {{{ body }}}
     
+    {{#if auth}}
+    <section class="clearfix"></section>
+    <footer>
+
+        <h2>Frase Motivacional</h2>
+
+    </footer>
+    {{/if}}
+
 </body>
 
 </html>

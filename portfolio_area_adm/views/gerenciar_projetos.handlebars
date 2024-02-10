@@ -18,26 +18,19 @@
                 <th>url</th>
                 <th colspan="2">ação</th>
             </tr>
+            {{#each projDados}}
             <tr>
-                <td>1</td>
-                <td>dfsfsdfdfsdfasdfsdfsdfsdf</td>
                 
-                <td>sfsdfsdfsdffdgfdg</td>
-                <td>00/00/0000</td>
-                <td>fafsdfsfsdffsaf.com.br</td>
+                <td>{{this.id}}</td>
+                <td>{{this.titulo}}</td>
+                
+                <td>{{this.cliente}}</td>
+                <td>{{this.data}}</td>
+                <td>{{this.url}}</td>
                 <td>editar</td>
                 <td>excluir</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>dfsfsdfdfsdfasdfsdfsdfsdf</td>
-                
-                <td>sfsdfsdfsdffdgfdg</td>
-                <td>00/00/0000</td>
-                <td>fafsdfsfsdffsaf.com.br</td>
-                <td>editar</td>
-                <td>excluir</td>
-            </tr>
+            {{/each}}
         </table>
 
         </div>
