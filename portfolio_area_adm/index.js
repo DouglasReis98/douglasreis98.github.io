@@ -38,10 +38,12 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/cadastrar-projeto', (req, res) => {
-    res.render('cadastrar_projeto', {
+    res.render('form_projeto', {
         auth: true,
         style: 'style.css',
-        style2: 'cadastrar_editar.css'
+        style2: 'cadastrar_editar.css',
+        header: 'Criar Novo',
+        action: '/cadastrar-projeto/cadastrar'
     })
     //res.send('cadastrar-projeto')
 })
@@ -49,14 +51,15 @@ app.get('/cadastrar-projeto', (req, res) => {
 app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     const titulo = req.body.titulo;
     const imagem = req.body.imagem;
+    const categoria = req.body.categoria;
     const descricao = req.body.descricao;
     const cliente = req.body.cliente;
     const data = req.body.data;
     const tags = req.body.tags;
     const url = req.body.url;
 
-    const sql = `INSERT INTO projetos (titulo, imagem, descricao, cliente, data, tags, url) VALUES ('${titulo}', '${imagem}', '${descricao}', '${cliente}', '${data}', '${tags}', '${url}')`
-
+    const sql = `INSERT INTO projetos (titulo, imagem, categoria, descricao, cliente, data, tags, url) VALUES ('${titulo}', '${imagem}', ${categoria}', '${descricao}', '${cliente}', '${data}', '${tags}', '${url}')`;
+    // const dados = ['titulo', 'imagem']
     conn.query(sql, (err) => {
 
         if (err) {
@@ -68,13 +71,64 @@ app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     })
 })
 
-app.get('/editar-projeto', (req, res) => {
-    //res.render('gerenciar-projetos')
-    res.render('editar_projeto', {
-        auth: true,
-        style: 'style.css',
-        style2: 'cadastrar_editar.css'
+app.get('/editar/:id', (req, res) => {
+    const id = req.params.id;
+
+    const sql = `SELECT * FROM projetos WHERE id = ${id}`;
+
+    conn.query(sql, (err, data) =>{
+
+        if (err) {
+            console.log(err);
+            return
+        }
+
+        const proj = data[0]
+
+        res.render('form_projeto', { proj,
+            auth: true,
+            style: 'style.css',
+            style2: 'cadastrar_editar.css',
+            header: 'Editar',
+            action: '/editar/concluir'
+        })
     })
+})
+
+app.post('/editar/concluir', (req, res) => {
+    const id = req.body.id;
+    const titulo = req.body.titulo;
+    const imagem = req.body.imagem;
+    const categoria = req.body.categoria;
+    const descricao = req.body.descricao;
+    const cliente = req.body.cliente;
+    const data = req.body.data;
+    const tags = req.body.tags;
+    const url = req.body.url;
+
+    const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${imagem}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
+
+    conn.query(sql, (err) => {
+        if (err) {
+            console.log(err)
+        }
+        res.redirect('/gerenciar-projetos')
+    })
+})
+
+app.post('/excluir/:id', (req, res) => {
+    const id = req.params.id;
+
+    const sql = `DELETE FROM projetos WHERE id = ${id}`
+
+    conn.query(sql, (err) => {
+        if (err) {
+            console.log(err)
+        }
+
+     res.redirect('/gerenciar-projetos')
+    })
+
 })
 
 app.get('/gerenciar-projetos', (req, res) => {

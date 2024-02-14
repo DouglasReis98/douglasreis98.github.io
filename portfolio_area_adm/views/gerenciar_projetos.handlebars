@@ -26,9 +26,13 @@
                 
                 <td>{{this.cliente}}</td>
                 <td>{{this.data}}</td>
-                <td>{{this.url}}</td>
-                <td>editar</td>
-                <td>excluir</td>
+                <td><a href="{{this.url}}">{{this.url}}</a></td>
+                <td><a href="/editar/{{this.id}}">editar</a></td> 
+                <td>
+                    <form action="/excluir/{{this.id}}" method="post">
+                        <input type="submit" value="excluir">
+                    </form>
+                </td>
             </tr>
             {{/each}}
         </table>

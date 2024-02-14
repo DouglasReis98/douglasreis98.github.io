@@ -5,8 +5,8 @@
     <title>Área Administrativa - DOUGLAS REIS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/{{ style }}" />
-    <link rel="stylesheet" type="text/css" href="css/{{ style2 }}" />
+    <link rel="stylesheet" type="text/css" href="/css/{{ style }}" />
+    <link rel="stylesheet" type="text/css" href="/css/{{ style2 }}" />
 </head>
 
 <body>
@@ -29,10 +29,10 @@
         <hr><br>
         <h3><a href="/">&larr; Home</a></h3>
         <ul>
-            <a href="cadastrar-projeto"><li>Criar Projeto</li></a>
-            <li><a href="gerenciar-projetos">Gerenciar Projetos</a></li>
-            <li><a href="gerenciar-categorias">Gerenciar Categorias</a></li>
-            <li><a href="gerenciar-dados">Gerenciar Dados ADM</a></li>
+            <a href="/cadastrar-projeto"><li>Criar Projeto</li></a>
+            <li><a href="/gerenciar-projetos">Gerenciar Projetos</a></li>
+            <li><a href="/gerenciar-categorias">Gerenciar Categorias</a></li>
+            <li><a href="/gerenciar-dados">Gerenciar Dados ADM</a></li>
             <li>Sair</li>
         </ul>
         <!--
@@ -58,5 +58,10 @@ Editar Dados
     {{/if}}
 
 </body>
-
+<script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#texto' ) )
+        .catch( function(error) { console.error( error ); } );
+</script>
 </html>

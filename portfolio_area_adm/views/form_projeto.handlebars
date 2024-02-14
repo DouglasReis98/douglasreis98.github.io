@@ -1,0 +1,49 @@
+<main>
+    <div class="container">
+
+        <h1>{{ header }} Projeto</h1>
+
+        <div class="msg_erro">
+            <h1>Mensagem de Erro</h1>
+        </div>
+
+        <form action="{{ action }}" method="post">
+            <input type="hidden" name="id" value="{{proj.id}}">
+            <label for="titulo">Título:</label></br>
+            <input type="text" id="titulo" name="titulo" value="{{proj.titulo}}">
+            </br>
+            <label for="imagem">Imagem:</label></br>
+            <input type="file" accept="image/*" id="imagem" name="imagem" file="{{proj.imagem}}">
+            </br>
+            <label for="categoria">Categoria:</label></br>
+            <select id="categoria" name="categoria">
+                <option value="1">Site</option>
+                <option value="2">Aplicação Web</option>
+                <option value="3">App Mobile</option>
+            </select>
+            <br /><br />
+            <label for="texto">Descrição:</label></br>
+            <textarea id="texto" name="descricao" height="500px">
+                {{proj.descricao}}
+            </textarea>
+            </br>
+            <label for="cliente">Cliente:</label></br>
+            <input type="text" id="cliente" name="cliente" value="{{proj.cliente}}">
+            </br>
+            <label for="data">Data:</label></br>
+            <input type="date" id="data" name="data" value="{{proj.data}}">
+            </br>
+            <label for="tags">Tags:</label></br>
+            <input type="text" id="tags" name="tags" value="{{proj.tags}}">
+            </br>
+            <label for="url">URL:</label></br>
+            <input type="text" id="url" name="url" value="{{proj.url}}">
+            </br>
+
+            <button type="submit" id="concluir">Concluir</button>
+
+        </form>
+
+    </div>
+</main>
+</script>
