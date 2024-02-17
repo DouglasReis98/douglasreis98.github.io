@@ -14,7 +14,8 @@ import 'swiper/css/navigation';
 
 register();
 
-/* /Swiper */
+/* Swiper */
+
 
 
 function App() {

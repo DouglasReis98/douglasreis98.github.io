@@ -4,7 +4,7 @@
             <h1>Gerenciar Categorias</h1>
 
 
-            <form method="post">
+            <form action="/gerenciar-categorias/cadastrar" method="post">
                 <input type="text" name="categoria" required class="inCategoria">
                 <input type="submit" id="cadastrar" value="Cadastrar" class="cat-salvar">
                 <input type="hidden" name="env" value="cat">
@@ -14,20 +14,16 @@
                 <h2>Categorias</h2>
                 <table>
 
+                    {{#each categDados}}
                     <tr>
-                        <td>Aplicação Web</td>
-                        <td><a href=''>Deletar</a></td>
+                        <td>{{this.categoria}}</td>
+                        <td>
+                            <form action="/gerenciar-categorias/excluir/{{this.id}}" method="post">
+                                <input type="submit" class="btnDeletar" value="Deletar">
+                            </form>
+                        </td>
                     </tr>
-
-                    <tr>
-                        <td>App Mobile</td>
-                        <td><a href=''>Deletar</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>Site</td>
-                        <td><a href=''>Deletar</a></td>
-                    </tr>
+                    {{/each}}
 
                 </table>
 

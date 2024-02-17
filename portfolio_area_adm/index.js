@@ -1,7 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-const mysql = require('mysql');
+const pool = require('./db/db');
+
+//console.log(pool)
 
 const hbs = exphbs.create({
     partialsDir: ['views/partials/']
@@ -58,9 +60,9 @@ app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     const tags = req.body.tags;
     const url = req.body.url;
 
-    const sql = `INSERT INTO projetos (titulo, imagem, categoria, descricao, cliente, data, tags, url) VALUES ('${titulo}', '${imagem}', ${categoria}', '${descricao}', '${cliente}', '${data}', '${tags}', '${url}')`;
-    // const dados = ['titulo', 'imagem']
-    conn.query(sql, (err) => {
+    const sql = `INSERT INTO projetos (??, ??, ??, ??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?, ?, ?, ?, )`;
+    const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
+    pool.query(sql, dados, (err) => {
 
         if (err) {
             console.log(err)
@@ -74,9 +76,10 @@ app.post('/cadastrar-projeto/cadastrar', (req, res) => {
 app.get('/editar/:id', (req, res) => {
     const id = req.params.id;
 
-    const sql = `SELECT * FROM projetos WHERE id = ${id}`;
+    const sql = `SELECT * FROM projetos WHERE ?? = ?`;
+    const dados = ['id', id];
 
-    conn.query(sql, (err, data) =>{
+    pool.query(sql, dados, (err, data) =>{
 
         if (err) {
             console.log(err);
@@ -84,7 +87,7 @@ app.get('/editar/:id', (req, res) => {
         }
 
         const proj = data[0]
-
+        
         res.render('form_projeto', { proj,
             auth: true,
             style: 'style.css',
@@ -107,8 +110,10 @@ app.post('/editar/concluir', (req, res) => {
     const url = req.body.url;
 
     const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${imagem}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
+    //const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
 
-    conn.query(sql, (err) => {
+
+    pool.query(sql, (err) => {
         if (err) {
             console.log(err)
         }
@@ -121,7 +126,7 @@ app.post('/excluir/:id', (req, res) => {
 
     const sql = `DELETE FROM projetos WHERE id = ${id}`
 
-    conn.query(sql, (err) => {
+    pool.query(sql, (err) => {
         if (err) {
             console.log(err)
         }
@@ -135,7 +140,7 @@ app.get('/gerenciar-projetos', (req, res) => {
 
     const sql = "SELECT * FROM projetos"
 
-    conn.query(sql, (err, dados) => {
+    pool.query(sql, (err, dados) => {
 
         if (err) {
             console.log(err)
@@ -151,35 +156,102 @@ app.get('/gerenciar-projetos', (req, res) => {
         })
     })
 
-
 })
 
 app.get('/gerenciar-categorias', (req, res) => {
     //res.render('gerenciar-categorias')
+
+    const sql = "SELECT * FROM categorias"
+    
+    pool.query(sql, (err, dados) => {
+
+        if (err) {
+            console.log(err)
+        }
+
+        const categDados = dados;
+    
+
     res.render('gerenciar_categorias', {
+        categDados,
         auth: true,
         style: 'style.css',
         style2: 'gerenciar_categorias.css'
+      })
     })
 })
 
+app.post('/gerenciar-categorias/cadastrar', (req, res) => {
+    const categoria = req.body.categoria;
+
+    const sql = `INSERT INTO categorias (categoria) VALUES ('${categoria}')`
+
+    pool.query(sql, (err) => {
+
+        if (err) {
+            console.log(err)
+        }
+
+        res.redirect('/gerenciar-categorias')
+    })
+
+})
+
+app.post('/gerenciar-categorias/excluir/:id', (req, res) => {
+    const id = req.params.id;
+
+    const sql = `DELETE FROM categorias WHERE id = ${id}`
+
+    pool.query(sql, (err) => {
+
+        if (err) {
+            console.log(err)
+        }
+
+    res.redirect('/gerenciar-categorias')
+    })
+})
+
+
 app.get('/gerenciar-dados', (req, res) => {
-    //res.render('gerenciar-dados')
+    const sql = `SELECT * FROM usuarios`;
+
+    pool.query(sql, (err, dados) => {
+
+        if (err) {
+            console.log(err)
+        }
+
+        const user = dados[0];
+
+
     res.render('gerenciar_dados', {
+        user,
         auth: true,
         style: 'style.css',
         style2: 'gerenciar_dados.css'
+        })
     })
 })
 
-const conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'portfolio'
-})
+app.post('/gerenciar-dados/changePassword', (req, res) => {
+    const senha = req.body.senha;
 
-conn.connect((err) => {
+    const sql = `UPDATE usuarios SET senha = '${senha}'`
+
+    pool.query(sql, (err) => {
+        if (err) {
+            console.log(err)
+        }
+        res.redirect('/');
+
+       // res.render('gerenciar_dados', { senha })
+    })
+
+});
+
+
+pool.connect((err) => {
 
     if (err) {
         console.log(err)

@@ -4,15 +4,15 @@
             <h1>Gerenciar Dados</h1>
 
 
-            <form method="post">
+            <form action="/gerenciar-dados/changePassword" method="post">
                 <label for="nome">Nome:</label></br>
-                <input type="text" id="nome" name="nome" value="Douglas Reis">
+                <input type="text" id="nome" name="nome" value="{{user.nome}}">
                 </br>
                 <label for="login">Login:</label></br>
-                <input type="text" id="login"name="login" value="douglas-reis_ads" disabled>
+                <input type="text" id="login"name="login" value="{{user.usuario}}" disabled>
                 </br>
                 <label for="senha">Senha:</label></br>
-                <input type="password" id="senha" name="senha" value="$2y$10$ftazKzYEXGh5j3zKhAOphuumVnlHI3Mfa2iJl2dnBlk1OlJcxxBry">
+                <input type="password" id="senha" name="senha" value="{{ senha }}">
                 </br>
 
                 <button id="salvar">Salvar</button>

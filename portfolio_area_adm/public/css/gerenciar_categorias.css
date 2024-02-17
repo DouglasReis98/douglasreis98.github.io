@@ -38,8 +38,22 @@ table{
     width: 100%;
 }
 
+table tr td form{
+    margin: 0;
+}
+
+.btnDeletar{
+    background: none;
+    color: red;
+    cursor: pointer;
+    font-size: 1em
+}
+
+.btnDeletar:hover{
+    color: rgb(114, 0, 23);
+}
+
 table tr td:nth-child(2){
     width: fit-content;
     text-align: center;
-    color: red;
 }

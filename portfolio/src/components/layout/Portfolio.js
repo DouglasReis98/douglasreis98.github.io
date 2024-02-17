@@ -1,6 +1,6 @@
 import styles from './css/Portfolio.module.css'
 import projeto from './../../img/proj-imagem.png'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Projetos from './Projetos'
 import Paginacao from './Paginacao';
 
@@ -9,6 +9,11 @@ function Portfolio() {
     const [pagAtual, setPagAtual] = useState(1);
     //const [postsPorPag, setPostsPorPag] = useState(6)
     const postsPorPag = 6;
+
+    useEffect(() => {
+      fetch("")
+      .then((res) => console.log(res.json))
+    })
 
     const projetos = [
         { id: 1, img: projeto, nome: "Nome do Projeto" },
