@@ -23,9 +23,11 @@ app.use(express.static("public"))
 // Rotas
 
 app.get('/', (req, res) => {
+
     res.render('home', {
         auth: true,
-        style: 'style.css'
+        style: 'style.css',
+        script: 'grafico.js'
     })
     //res.send('home')
 
@@ -40,12 +42,14 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/cadastrar-projeto', (req, res) => {
+
     res.render('form_projeto', {
         auth: true,
         style: 'style.css',
         style2: 'cadastrar_editar.css',
         header: 'Criar Novo',
-        action: '/cadastrar-projeto/cadastrar'
+        action: '/cadastrar-projeto/cadastrar',
+        script: 'editor_texto.js'
     })
     //res.send('cadastrar-projeto')
 })
@@ -79,6 +83,8 @@ app.get('/editar/:id', (req, res) => {
     const sql = `SELECT * FROM projetos WHERE ?? = ?`;
     const dados = ['id', id];
 
+    let scripts = [{ script: '/scripts/editor_texto.js' }]
+
     pool.query(sql, dados, (err, data) =>{
 
         if (err) {
@@ -93,7 +99,8 @@ app.get('/editar/:id', (req, res) => {
             style: 'style.css',
             style2: 'cadastrar_editar.css',
             header: 'Editar',
-            action: '/editar/concluir'
+            action: '/editar/concluir',
+            scripts
         })
     })
 })

@@ -154,39 +154,9 @@ main{
     font-family: Teko;
 }
 
-.legenda{
-    text-align: right;
-}
-
-.legenda ul{
-    display: flex;
-    justify-content: right;
-}
-
-.legenda ul li{
-    display: flex;
-    align-items: center;
-    margin: 0 .5em;
-}
-
-.legenda ul li span{
-    width: 10px;
-    height: 10px;
-    border-radius: 2em;
-    background-color: #000;
-    margin: 0 .5em;
-}
-
-.legenda .legSite{
-    background-color: #ff0000;   
-}
-
-.legenda .legWeb{
-    background-color: #0044ff;   
-}
-
-.legenda .legMobile{
-    background-color: #ffe600;    
+.grafico{
+    max-width: 30em;
+    margin: 0 auto;
 }
 
 .clearfix{

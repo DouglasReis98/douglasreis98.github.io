@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apexcharts": "^3.48.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "mysql": "^2.18.1",
