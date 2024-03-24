@@ -1,5 +1,9 @@
+const numSites = Number(document.getElementById("numSites").defaultValue);
+const numAppWeb = Number(document.getElementById("numAppWeb").defaultValue);
+const numAppMobile = Number(document.getElementById("numAppMobile").defaultValue);
+
 var options = {
-    series: [44, 55, 13],
+    series: [numSites, numAppWeb, numAppMobile],
     chart: {
     width: 470,
     type: 'pie',
@@ -9,7 +13,7 @@ var options = {
     breakpoint: 480,
     options: {
       chart: {
-        width: 200
+        width: 300
       },
       legend: {
         position: 'bottom'

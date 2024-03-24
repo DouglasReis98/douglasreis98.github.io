@@ -24,11 +24,62 @@ app.use(express.static("public"))
 
 app.get('/', (req, res) => {
 
-    res.render('home', {
-        auth: true,
-        style: 'style.css',
-        script: 'grafico.js'
+    let qtySites = `SELECT count(*) AS totalSites FROM projetos WHERE categoria = 1`
+    let qtyAppWeb = `SELECT count(*) AS totalAppWeb FROM projetos WHERE categoria = 2`
+    let qtyAppMobile = `SELECT count(*) AS totalAppMobile FROM projetos WHERE categoria = 3`
+    let qtyProjetos = `SELECT count(*) AS total FROM projetos`
+    //console.log(qtySites, qtyAppWeb, qtyAppMobile)
+
+    let script = ``
+
+    pool.query(qtySites, (err, resultado) => {
+        if (err) {
+            console.log(err)
+            return
+        }
+
+        let numSites = resultado[0].totalSites;            
+
+        pool.query(qtyAppWeb, (err, resultado) => {
+            if (err) {
+                console.log(err)
+                return
+            }
+
+            let numAppWeb = resultado[0].totalAppWeb;
+
+            pool.query(qtyAppMobile, (err, resultado) => {
+                if (err) {
+                    console.log(err)
+                    return
+                }
+
+                let numAppMobile = resultado[0].totalAppMobile;
+
+                pool.query(qtyProjetos, (err, resultado) => {
+                    if (err) {
+                        console.log(err)
+                        return
+                    }
+
+                    let numTotal = resultado[0].total;
+
+        //console.log(numSites, numAppWeb, numAppMobile, numTotal)
+        res.render('home', {
+            auth: true,
+            style: 'style.css',
+            script: 'grafico.js',
+            numSites,
+            numAppWeb,
+            numAppMobile,
+            numTotal
+        }
+        )
+                })
+            })
+        })
     })
+
     //res.send('home')
 
 })
@@ -83,9 +134,7 @@ app.get('/editar/:id', (req, res) => {
     const sql = `SELECT * FROM projetos WHERE ?? = ?`;
     const dados = ['id', id];
 
-    let scripts = [{ script: '/scripts/editor_texto.js' }]
-
-    pool.query(sql, dados, (err, data) =>{
+    pool.query(sql, dados, (err, data) => {
 
         if (err) {
             console.log(err);
@@ -93,14 +142,15 @@ app.get('/editar/:id', (req, res) => {
         }
 
         const proj = data[0]
-        
-        res.render('form_projeto', { proj,
+
+        res.render('form_projeto', {
+            proj,
             auth: true,
             style: 'style.css',
             style2: 'cadastrar_editar.css',
             header: 'Editar',
             action: '/editar/concluir',
-            scripts
+            script: 'editor_texto.js'
         })
     })
 })
@@ -138,7 +188,7 @@ app.post('/excluir/:id', (req, res) => {
             console.log(err)
         }
 
-     res.redirect('/gerenciar-projetos')
+        res.redirect('/gerenciar-projetos')
     })
 
 })
@@ -169,7 +219,7 @@ app.get('/gerenciar-categorias', (req, res) => {
     //res.render('gerenciar-categorias')
 
     const sql = "SELECT * FROM categorias"
-    
+
     pool.query(sql, (err, dados) => {
 
         if (err) {
@@ -177,14 +227,14 @@ app.get('/gerenciar-categorias', (req, res) => {
         }
 
         const categDados = dados;
-    
 
-    res.render('gerenciar_categorias', {
-        categDados,
-        auth: true,
-        style: 'style.css',
-        style2: 'gerenciar_categorias.css'
-      })
+
+        res.render('gerenciar_categorias', {
+            categDados,
+            auth: true,
+            style: 'style.css',
+            style2: 'gerenciar_categorias.css'
+        })
     })
 })
 
@@ -215,7 +265,7 @@ app.post('/gerenciar-categorias/excluir/:id', (req, res) => {
             console.log(err)
         }
 
-    res.redirect('/gerenciar-categorias')
+        res.redirect('/gerenciar-categorias')
     })
 })
 
@@ -232,11 +282,11 @@ app.get('/gerenciar-dados', (req, res) => {
         const user = dados[0];
 
 
-    res.render('gerenciar_dados', {
-        user,
-        auth: true,
-        style: 'style.css',
-        style2: 'gerenciar_dados.css'
+        res.render('gerenciar_dados', {
+            user,
+            auth: true,
+            style: 'style.css',
+            style2: 'gerenciar_dados.css'
         })
     })
 })
@@ -252,7 +302,7 @@ app.post('/gerenciar-dados/changePassword', (req, res) => {
         }
         res.redirect('/');
 
-       // res.render('gerenciar_dados', { senha })
+        // res.render('gerenciar_dados', { senha })
     })
 
 });
