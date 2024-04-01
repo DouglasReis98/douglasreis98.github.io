@@ -1,6 +1,8 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
+const bcrypt = require('bcrypt')
+const flashCard = require('express-flash')
 const pool = require('./db/db');
 
 //console.log(pool)
@@ -85,6 +87,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
+
+    
     res.render('login', {
         auth: false,
         style: 'style_login.css'
@@ -293,8 +297,12 @@ app.get('/gerenciar-dados', (req, res) => {
 
 app.post('/gerenciar-dados/changePassword', (req, res) => {
     const senha = req.body.senha;
+    
+    const salt = bcrypt.genSaltSync(10);
+    const cryptedSenha = bcrypt.hashSync(senha, salt)
 
-    const sql = `UPDATE usuarios SET senha = '${senha}'`
+
+    const sql = `UPDATE usuarios SET senha = '${cryptedSenha}'`
 
     pool.query(sql, (err) => {
         if (err) {
