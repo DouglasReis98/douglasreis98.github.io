@@ -24,6 +24,26 @@ form input{
     border: none;
 }
 
+.imagem{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagem img{
+    width: 70%;
+}
+
+.imagem li{
+    width: 50%;
+}
+
+.imagem :nth-child(2){
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50%;
+}
+
 form button{
     width: 80%;
     height: 40px;

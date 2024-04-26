@@ -22,6 +22,9 @@ app.use(express.urlencoded({
 
 app.use(express.static("public"))
 
+// flash messages
+//app.use(flashCard())
+
 // Rotas
 
 app.get('/', (req, res) => {
@@ -88,7 +91,31 @@ app.get('/', (req, res) => {
 
 app.get('/login', (req, res) => {
 
+    res.render('login', {
+        auth: false,
+        style: 'style_login.css'
+    })
+    //res.send('login')
+})
+
+app.post('/login', (req, res) => {
+
     
+    const {usuario, senha} = req.body
+    
+    // se o usuario estiver correto
+
+    const usuarioLogin = `SELECT * FROM projetos WHERE usuario = ${usuario}`;
+
+    if (!usuarioLogin) {
+        console.log("Usuário não encontrado")
+        //req.flash("message", "Usuário não encontrado!")
+    } else {
+        console.log("Achei!")
+    }
+
+    // se o usuario estiver correto
+
     res.render('login', {
         auth: false,
         style: 'style_login.css'
