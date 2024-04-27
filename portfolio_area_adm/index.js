@@ -5,6 +5,7 @@ const app = express();
 const bcrypt = require('bcrypt')
 const flashCard = require('express-flash')
 const pool = require('./db/db');
+const fs = require('fs')
 
 //console.log(pool)
 
@@ -46,7 +47,7 @@ app.get('/', (req, res) => {
             return
         }
 
-        let numSites = resultado[0].totalSites;            
+        let numSites = resultado[0].totalSites;
 
         pool.query(qtyAppWeb, (err, resultado) => {
             if (err) {
@@ -72,17 +73,17 @@ app.get('/', (req, res) => {
 
                     let numTotal = resultado[0].total;
 
-        //console.log(numSites, numAppWeb, numAppMobile, numTotal)
-        res.render('home', {
-            auth: true,
-            style: 'style.css',
-            script: 'grafico.js',
-            numSites,
-            numAppWeb,
-            numAppMobile,
-            numTotal
-        }
-        )
+                    //console.log(numSites, numAppWeb, numAppMobile, numTotal)
+                    res.render('home', {
+                        auth: true,
+                        style: 'style.css',
+                        script: 'grafico.js',
+                        numSites,
+                        numAppWeb,
+                        numAppMobile,
+                        numTotal
+                    }
+                    )
                 })
             })
         })
@@ -103,9 +104,9 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
 
-    
-    const {usuario, senha} = req.body
-    
+
+    const { usuario, senha } = req.body
+
     // se o usuario estiver correto
 
     const usuarioLogin = `SELECT * FROM projetos WHERE usuario = ${usuario}`;
@@ -141,7 +142,7 @@ app.get('/cadastrar-projeto', (req, res) => {
 
 app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     const titulo = req.body.titulo;
-    const imagem = req.body.imagem;
+    const imagem = req.files.imagem;
     const categoria = req.body.categoria;
     const descricao = req.body.descricao;
     const cliente = req.body.cliente;
@@ -149,19 +150,8 @@ app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     const tags = req.body.tags;
     const url = req.body.url;
 
-    const novaImagem = req.files.imagem;
 
-    // editar imagem
-
-    try {
-        imagem = req.files.imagem
-        imagem.mv(__dirname + "/public/img/uploads/" + imagem.name)
-        console.log("imagem atualizada")
-    } catch (error) {
-        imagem  = req.body.imagem
-        res.write("imagem mantida")
-    }
-
+    imagem.mv(__dirname + "/public/img/uploads/" + imagem.name)
     const sql = `INSERT INTO projetos (??, ??, ??, ??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
     const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem.name, categoria, descricao, cliente, data, tags, url]
     pool.query(sql, dados, (err) => {
@@ -205,7 +195,7 @@ app.get('/editar/:id', (req, res) => {
 app.post('/editar/concluir', (req, res) => {
     const id = req.body.id;
     const titulo = req.body.titulo;
-    const imagem = req.files.imagem;
+    const imagemAtual = req.body.imagemAtual;
     const categoria = req.body.categoria;
     const descricao = req.body.descricao;
     const cliente = req.body.cliente;
@@ -213,18 +203,43 @@ app.post('/editar/concluir', (req, res) => {
     const tags = req.body.tags;
     const url = req.body.url;
 
-    imagem.mv(__dirname + "/public/img/uploads/" + imagem.name)
-    const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${imagem.name}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
-    //const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
+    // editar imagem
+
+    try {
+        const novaImagem = req.files.imagem;
+        const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${novaImagem.name}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
+        //const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
 
 
-    pool.query(sql, (err) => {
-        if (err) {
-            console.log(err)
-        }
-        res.redirect('/gerenciar-projetos')
-    })
-})
+        pool.query(sql, (err, res) => {
+            // Se o SQL falhar
+            if (err) throw err;
+
+            // Remove imagem antiga
+            fs.unlink(__dirname + "/public/img/uploads/" + imagemAtual, (erro_img) => {
+                // Se o FileSystem falhar
+                if (erro_img) throw err;
+            });
+
+            // Cadastra nova imagem
+            novaImagem.mv(__dirname + "/public/img/uploads/" + novaImagem.name)
+
+        })
+    } catch (error) {
+        const sql = `UPDATE projetos SET titulo  = '${titulo}', categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
+        //const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
+
+        // Executa comando SQL
+        pool.query(sql, (err, res) => {
+            // Caso o SQL falhe
+            if (err) throw err
+        })
+    }
+
+    // Redirecionamento
+    res.redirect('/gerenciar-projetos')
+
+});
 
 app.post('/excluir/:id', (req, res) => {
     const id = req.params.id;
@@ -341,7 +356,7 @@ app.get('/gerenciar-dados', (req, res) => {
 
 app.post('/gerenciar-dados/changePassword', (req, res) => {
     const senha = req.body.senha;
-    
+
     const salt = bcrypt.genSaltSync(10);
     const cryptedSenha = bcrypt.hashSync(senha, salt)
 
