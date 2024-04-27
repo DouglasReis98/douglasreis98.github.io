@@ -1,5 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const fileUpload = require("express-fileupload")
 const app = express();
 const bcrypt = require('bcrypt')
 const flashCard = require('express-flash')
@@ -14,6 +15,8 @@ const hbs = exphbs.create({
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+
+app.use(fileUpload())
 
 app.use(express.urlencoded({
     extended: true
@@ -146,8 +149,21 @@ app.post('/cadastrar-projeto/cadastrar', (req, res) => {
     const tags = req.body.tags;
     const url = req.body.url;
 
-    const sql = `INSERT INTO projetos (??, ??, ??, ??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?, ?, ?, ?, )`;
-    const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
+    const novaImagem = req.files.imagem;
+
+    // editar imagem
+
+    try {
+        imagem = req.files.imagem
+        imagem.mv(__dirname + "/public/img/uploads/" + imagem.name)
+        console.log("imagem atualizada")
+    } catch (error) {
+        imagem  = req.body.imagem
+        res.write("imagem mantida")
+    }
+
+    const sql = `INSERT INTO projetos (??, ??, ??, ??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+    const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem.name, categoria, descricao, cliente, data, tags, url]
     pool.query(sql, dados, (err) => {
 
         if (err) {
@@ -189,7 +205,7 @@ app.get('/editar/:id', (req, res) => {
 app.post('/editar/concluir', (req, res) => {
     const id = req.body.id;
     const titulo = req.body.titulo;
-    const imagem = req.body.imagem;
+    const imagem = req.files.imagem;
     const categoria = req.body.categoria;
     const descricao = req.body.descricao;
     const cliente = req.body.cliente;
@@ -197,7 +213,8 @@ app.post('/editar/concluir', (req, res) => {
     const tags = req.body.tags;
     const url = req.body.url;
 
-    const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${imagem}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
+    imagem.mv(__dirname + "/public/img/uploads/" + imagem.name)
+    const sql = `UPDATE projetos SET titulo  = '${titulo}',  imagem  = '${imagem.name}',  categoria  = '${categoria}', descricao  = '${descricao}', cliente  = '${cliente}', data  = '${data}', tags  = '${tags}', url  = '${url}' WHERE id = ${id}`
     //const dados = ['titulo', 'imagem', 'categoria', 'descricao', 'cliente', 'data', 'tags', 'url', titulo, imagem, categoria, descricao, cliente, data, tags, url]
 
 

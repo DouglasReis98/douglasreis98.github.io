@@ -7,7 +7,7 @@
             <h1>Mensagem de Erro</h1>
         </div>
 
-        <form action="{{ action }}" method="post">
+        <form action="{{ action }}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="{{proj.id}}">
             <label for="titulo">Título:</label></br>
             <input type="text" id="titulo" name="titulo" value="{{proj.titulo}}">
@@ -19,7 +19,7 @@
                     <input type="file" accept="image/png" id="imagem" name="imagem">
                 </li>
                 <li>
-                    <img src="{{proj.imagem}}"
+                    <img src="/img/uploads/{{proj.imagem}}"
                         alt="{{proj.imagem}}">
                 </li>
             </ul>
